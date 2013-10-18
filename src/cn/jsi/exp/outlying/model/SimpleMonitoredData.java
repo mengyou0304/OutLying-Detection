@@ -13,7 +13,7 @@ import java.util.Date;
  * @author Robin
  *
  */
-public class SimpleMonitoredData {
+public class SimpleMonitoredData extends BaseMonitoredData{
 	private int d1;
 	private double d2;
 	private float d3;
