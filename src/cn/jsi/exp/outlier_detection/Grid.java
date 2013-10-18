@@ -54,14 +54,14 @@ public class Grid {
 	public void setDensity(double density) {
 		this.density = density;
 	}*/
-	private int getNumberOfPointsHit() {
+	public int getNumberOfPointsHit() {
 		return numberOfPointsHit;
 	}
 	private void setNumberOfPointsHit(int numberOfPointsHit) {
 		this.numberOfPointsHit = numberOfPointsHit;
 	}	
 	
-	private void computeHitPoints(Point[] pArray){
+	public void computeHitPoints(Point[] pArray){
 		/*
 		 * trace the hit points in the vector and assign the number of them to numberofPointsHit
 		 */
