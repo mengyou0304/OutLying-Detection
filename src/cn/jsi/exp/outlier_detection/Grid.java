@@ -15,13 +15,14 @@ public class Grid {
 	private double locX,locY;
 //	private double density;
 	private int numberOfPointsHit;
-	public Vector<Point> hitPoints;
+	public Vector<RaterablePoints> hitPoints;
+	public boolean isDensity;
 
 	public Grid(double locX, double locY) {
 		super();
 		this.locX = locX;
 		this.locY = locY;
-		hitPoints = new Vector<Point>();
+		hitPoints = new Vector<RaterablePoints>();
 	}
 	public double getLocX() {
 		return locX;
@@ -61,13 +62,14 @@ public class Grid {
 		this.numberOfPointsHit = numberOfPointsHit;
 	}	
 	
-	public void computeHitPoints(Point[] pArray){
+	public void computeHitPoints(RaterablePoints[] pArray){
 		/*
 		 * trace the hit points in the vector and assign the number of them to numberofPointsHit
 		 */
 		for (int i = 0; i < pArray.length; i++) {
 			if (isInGrid(this, pArray[i])) {
 				hitPoints.add(pArray[i]);
+				pArray[i].setHitGrid(this);
 			}
 		}
 		setNumberOfPointsHit(hitPoints.size());

@@ -13,16 +13,18 @@ public abstract class OutlierDetector {
 	 * @param densityThreshold
 	 * @return
 	 */
-	public static Vector<Point> findOutOutlier(Vector<Grid> g, int densityThreshold){
-		Vector<Point> possibleOutliers = new Vector<Point>();
+	public static Vector<RaterablePoints> findOutOutlier(Vector<Grid> g, int densityThreshold){
+		Vector<RaterablePoints> possibleOutliers = new Vector<RaterablePoints>();
 		for (Iterator<Grid> iter = g.iterator(); iter.hasNext();) {
 			Grid tmpGrid = iter.next();
 			if (tmpGrid.getNumberOfPointsHit()>=densityThreshold) {
 				//if the number of hit points in the grid is more than threshold, the grid is regarded as density grid
+				tmpGrid.isDensity=true;
 				continue;
 			} else {
 				//TODO cannot ensure this syntax
-				for (Point point : tmpGrid.hitPoints) {
+				tmpGrid.isDensity=false;
+				for (RaterablePoints point : tmpGrid.hitPoints) {
 					possibleOutliers.add(point);
 				}
 			}

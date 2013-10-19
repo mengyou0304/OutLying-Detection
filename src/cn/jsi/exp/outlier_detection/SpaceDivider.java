@@ -1,5 +1,6 @@
 package cn.jsi.exp.outlier_detection;
 
+
 import java.util.Vector;
 
 public class SpaceDivider {

@@ -2,11 +2,27 @@ package cn.jsi.exp.outlier_detection;
 
 import java.awt.Point;
 
+
 public class RaterablePoints extends Point implements Comparable<RaterablePoints> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private double score;
 	private Grid nearestGrid;
+	private Grid hitGrid;
 	
+	
+
+	public Grid getHitGrid() {
+		return hitGrid;
+	}
+
+	public void setHitGrid(Grid hitGrid) {
+		this.hitGrid = hitGrid;
+	}
+
 	public double getScore() {
 		return score;
 	}
