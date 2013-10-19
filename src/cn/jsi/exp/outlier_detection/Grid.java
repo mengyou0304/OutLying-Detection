@@ -15,7 +15,7 @@ public class Grid {
 	private double locX,locY;
 //	private double density;
 	private int numberOfPointsHit;
-	private Vector<Point> hitPoints;
+	public Vector<Point> hitPoints;
 
 	public Grid(double locX, double locY) {
 		super();
