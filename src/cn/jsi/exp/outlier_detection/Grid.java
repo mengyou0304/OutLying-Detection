@@ -11,7 +11,7 @@ import java.util.Vector;
  * @author yulang
  */
 public class Grid {
-	private static int width,height;
+	public static int width,height;
 	private double locX,locY;
 //	private double density;
 	private int numberOfPointsHit;
@@ -24,6 +24,7 @@ public class Grid {
 		this.locY = locY;
 		hitPoints = new Vector<RaterablePoints>();
 	}
+	
 	public double getLocX() {
 		return locX;
 	}
@@ -76,7 +77,7 @@ public class Grid {
 	}
 	
 
-	private static boolean isInGrid(Grid g, Point p) {
+	public static boolean isInGrid(Grid g, Point p) {
 		if ((p.x>=g.getLocX())&&(p.x<=g.getLocX()+width)&&(p.y>=g.getLocY())&&(p.x<=g.getLocY()+height)) {
 			return true;
 		} else {
