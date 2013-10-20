@@ -6,12 +6,12 @@ import cn.jsi.exp.outlier_detection.Grid;
 import cn.jsi.exp.outlier_detection.RaterablePoints;
 
 public abstract class DistanceCalculator {
-	public static double computeDistance(Point p1, Point p2) {
+	public static double computeDistance(RaterablePoints p1, RaterablePoints p2) {
 		double a = Math.pow(p1.getX() - p2.getX(), 2) + Math.pow(p1.getY() - p2.getY(), 2);
 		return Math.sqrt(a);
 	}
 	
-	public static double computeDistance(Point p, Grid g) {
+	public static double computeDistance(RaterablePoints p, Grid g) {
 		if (Grid.isInGrid(g, p)) {
 			return 0;
 		}

@@ -3,7 +3,7 @@ package cn.jsi.exp.outlier_detection;
 import java.awt.Point;
 
 
-public class RaterablePoints extends Point implements Comparable<RaterablePoints> {
+public class RaterablePoints implements Comparable<RaterablePoints> {
 
 	/**
 	 * 
@@ -18,7 +18,7 @@ public class RaterablePoints extends Point implements Comparable<RaterablePoints
 	
 
 	public RaterablePoints(double x, double y) {
-		super();
+//		super();
 		this.x = x;
 		this.y = y;
 	}

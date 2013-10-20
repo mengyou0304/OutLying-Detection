@@ -78,7 +78,7 @@ public class Grid {
 	}
 	
 
-	public static boolean isInGrid(Grid g, Point p) {
+	public static boolean isInGrid(Grid g, RaterablePoints p) {
 //		System.out.println(p.getX());
 //		System.out.println(g.getLocX());
 //		System.out.println(width);
