@@ -11,10 +11,10 @@ import java.util.Vector;
  * @author yulang
  */
 public class Grid {
-	public static int width,height;
+	public static double width,height;
 	private double locX,locY;
 //	private double density;
-	private int numberOfPointsHit;
+	private int numberOfPointsHit=0;
 	public Vector<RaterablePoints> hitPoints;
 	public boolean isDensity;
 
@@ -37,16 +37,16 @@ public class Grid {
 	public void setLocY(double locY) {
 		this.locY = locY;
 	}
-	public static int getWidth() {
+	public static double getWidth() {
 		return width;
 	}
-	public static void setWidth(int width) {
+	public static void setWidth(double width) {
 		Grid.width = width;
 	}
-	public static int getHeight() {
+	public static double getHeight() {
 		return height;
 	}
-	public static void setHeight(int height) {
+	public static void setHeight(double height) {
 		Grid.height = height;
 	}
 
@@ -63,14 +63,15 @@ public class Grid {
 		this.numberOfPointsHit = numberOfPointsHit;
 	}	
 	
-	public void computeHitPoints(RaterablePoints[] pArray){
+	public void computeHitPoints(Vector<RaterablePoints> raterablePoints){
 		/*
 		 * trace the hit points in the vector and assign the number of them to numberofPointsHit
 		 */
-		for (int i = 0; i < pArray.length; i++) {
-			if (isInGrid(this, pArray[i])) {
-				hitPoints.add(pArray[i]);
-				pArray[i].setHitGrid(this);
+		for (RaterablePoints raterablePoints2 : raterablePoints) {
+			if (isInGrid(this, raterablePoints2)) {
+//				System.out.println("hello");
+				hitPoints.add(raterablePoints2);
+				raterablePoints2.setHitGrid(this);
 			}
 		}
 		setNumberOfPointsHit(hitPoints.size());
@@ -78,7 +79,10 @@ public class Grid {
 	
 
 	public static boolean isInGrid(Grid g, Point p) {
-		if ((p.x>=g.getLocX())&&(p.x<=g.getLocX()+width)&&(p.y>=g.getLocY())&&(p.x<=g.getLocY()+height)) {
+//		System.out.println(p.getX());
+//		System.out.println(g.getLocX());
+//		System.out.println(width);
+		if ((p.getX()>=g.getLocX())&&(p.getX()<=g.getLocX()+width)&&(p.getY()>=g.getLocY())&&(p.getY()<=g.getLocY()+height)) {
 			return true;
 		} else {
 			return false;

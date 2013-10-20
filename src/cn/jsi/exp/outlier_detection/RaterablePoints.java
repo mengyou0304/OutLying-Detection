@@ -9,7 +9,7 @@ public class RaterablePoints extends Point implements Comparable<RaterablePoints
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private double score;
+	private double score=0;
 	private Grid nearestGrid;
 	private Grid hitGrid;
 	private double x,y;

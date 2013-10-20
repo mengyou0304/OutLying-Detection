@@ -41,6 +41,8 @@ public class SpaceDivider {
 	public Vector<Grid> gridGenerator(){
 		Vector<Grid> rstGrids = new Vector<Grid>();
 		Grid grid;
+		Grid.setHeight(divideLengthY);
+		Grid.setWidth(divideLengthX);
 		for (double i = 0; i < xSpan; i+=divideLengthX) {
 			for (double j = 0; j < ySpan; j+=divideLengthY) {
 				grid = new Grid(i, j);
