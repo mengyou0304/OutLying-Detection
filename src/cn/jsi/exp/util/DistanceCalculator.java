@@ -11,7 +11,7 @@ public abstract class DistanceCalculator {
 		return Math.sqrt(a);
 	}
 	
-	public double computeDistance(Point p, Grid g) {
+	public static double computeDistance(Point p, Grid g) {
 		if (Grid.isInGrid(g, p)) {
 			return 0;
 		}
