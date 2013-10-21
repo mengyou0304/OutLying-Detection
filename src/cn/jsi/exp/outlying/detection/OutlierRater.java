@@ -1,18 +1,18 @@
-package cn.jsi.exp.outlier_detection;
+package cn.jsi.exp.outlying.detection;
 
 import java.awt.Point;
 import java.util.*;
 
-import cn.jsi.exp.util.DistanceCalculator;
+import cn.jsi.exp.outlying.util.DistanceCalculator;
 
 import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable;
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+import java.util.List;
 
 public abstract class OutlierRater {
 	
 	
-	public static Vector<RaterablePoints> getOutlierRank(Vector<RaterablePoints> raterablePoints, Vector<Grid> grids ) {
+	public static List<RaterablePoints> getOutlierRank(List<RaterablePoints> raterablePoints, List<Grid> grids ) {
 		/* USED FOR DEBUG		
 		 * java.util.List<RaterablePoints> raterablePoints2 = new ArrayList<RaterablePoints>();
 		 *
@@ -30,6 +30,7 @@ public abstract class OutlierRater {
 	public static void scorer(RaterablePoints raterablePoints) {
 		Grid nearest = raterablePoints.getNearestGrid();
 		double score=0;
+//		System.out.println("nearest is"+nearest);
 		for (RaterablePoints hitpoint : nearest.hitPoints) {
 			score+=DistanceCalculator.computeDistance(raterablePoints, hitpoint);
 		}
@@ -37,31 +38,11 @@ public abstract class OutlierRater {
 		raterablePoints.setScore(score);
 	}
 	
-	private static void findNearest(Vector<Grid> grids, RaterablePoints point) {
-		double tmpmin=0,curDistance=0;
-		Grid tmpGrid = null;
-		for (Grid grid : grids) {
-			if ((grid.isDensity==false) || (point.getHitGrid()==grid)) {
-				//TODO == or equals?
-				continue;
-			} else if (tmpmin==0) {
-				tmpGrid=grid;
-				tmpmin = DistanceCalculator.computeDistance(point, grid);
-			} else {
-				curDistance = DistanceCalculator.computeDistance(point, grid);
-				if (tmpmin>curDistance) {
-					tmpGrid = grid;
-				}
-				tmpmin = Math.min(curDistance, tmpmin);
-			}
-		}
-		point.setNearestGrid(tmpGrid);
-		//return tmpGrid;
-	}
 	
-	private static void preparer(Vector<RaterablePoints> raterablePoints, Vector<Grid> grids) {
+	
+	private static void preparer(List<RaterablePoints> raterablePoints, List<Grid> grids) {
 		for (RaterablePoints raterablepoint : raterablePoints) {
-			findNearest(grids, raterablepoint);
+			DistanceCalculator.findNearest(grids, raterablepoint);
 		}
 	}
 	

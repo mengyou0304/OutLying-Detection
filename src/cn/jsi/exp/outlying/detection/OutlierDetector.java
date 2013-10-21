@@ -1,9 +1,11 @@
-package cn.jsi.exp.outlier_detection;
+package cn.jsi.exp.outlying.detection;
 
-import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Vector;
+
+import cn.jsi.exp.outlying.setting.SystemParameters;
 
 public abstract class OutlierDetector {
 //	private Vector<Point> possibleOutlier;
@@ -13,11 +15,11 @@ public abstract class OutlierDetector {
 	 * @param densityThreshold
 	 * @return
 	 */
-	public static Vector<RaterablePoints> findOutOutlier(Vector<Grid> g, int densityThreshold){
-		Vector<RaterablePoints> possibleOutliers = new Vector<RaterablePoints>();
+	public static List<RaterablePoints> findOutOutlier(List<Grid> g){
+		List<RaterablePoints> possibleOutliers = new ArrayList<RaterablePoints>();
 		for (Iterator<Grid> iter = g.iterator(); iter.hasNext();) {
 			Grid tmpGrid = iter.next();
-			if (tmpGrid.getNumberOfPointsHit()>=densityThreshold) {
+			if (tmpGrid.getNumberOfPointsHit()>=SystemParameters.densityThreshold) {
 				//if the number of hit points in the grid is more than threshold, the grid is regarded as density grid
 				tmpGrid.isDensity=true;
 				continue;
