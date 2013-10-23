@@ -1,11 +1,10 @@
 package cn.jsi.exp.outlying.detection;
 
-import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-import cn.jsi.exp.outlying.setting.SystemConst;
+import cn.jsi.exp.outlying.setting.SystemParameters;
 import cn.jsi.exp.outlying.util.DistanceCalculator;
 
 /**
@@ -16,71 +15,99 @@ import cn.jsi.exp.outlying.util.DistanceCalculator;
  * @author yulang RobinMeng
  */
 public class Grid {
-	public static List<Double> locals;
-	public static List<Double> widths;
+	private  List<Double> locals;
+	private  List<Double> widths;
 	private int numberOfPointsHit = 0;
-	public List<RaterablePoints> hitPoints;
-	public boolean isDensity;
+	private List<DataPoint> hitPoints;
+	private boolean isDensity;
+	private Integer weight = 0;
+	private Double distanceWeight = 0d;
 
 	public Grid() {
 		locals = new ArrayList<Double>();
 		widths = new ArrayList<Double>();
-		hitPoints = new ArrayList<RaterablePoints>();
+		hitPoints = new ArrayList<DataPoint>();
 	}
 
 	public Grid(List<Double> localvalues) {
-		locals=localvalues;
-		widths = new ArrayList<Double>();
-		for(int i=0;i<locals.size();i++){
-			widths.add(SystemConst.divideLength);
+		locals = new ArrayList<Double>();
+		for (int i = 0; i < localvalues.size(); i++) {
+			Double tempd = localvalues.get(i) / SystemParameters.divideLength;
+
+			Integer number = tempd.intValue();
+			locals.add(number * SystemParameters.divideLength);
 		}
-		hitPoints = new ArrayList<RaterablePoints>();
+		widths = new ArrayList<Double>();
+		for (int i = 0; i < locals.size(); i++) {
+			widths.add(SystemParameters.divideLength);
+		}
+		hitPoints = new ArrayList<DataPoint>();
 	}
 
-	public static List<Double> getLocals() {
+	public  List<Double> getLocals() {
 		return locals;
 	}
 
-	public static void setLocals(List<Double> locals) {
-		Grid.locals = locals;
+	public  void setLocals(List<Double> locals) {
+		this.locals = locals;
 	}
 
-	public static List<Double> getWidths() {
+	public  List<Double> getWidths() {
 		return widths;
 	}
 
-	public static void setWidths(List<Double> widths) {
-		Grid.widths = widths;
+	public  void setWidths(List<Double> widths) {
+		this.widths = widths;
 	}
 
 	private void setNumberOfPointsHit(int numberOfPointsHit) {
 		this.numberOfPointsHit = numberOfPointsHit;
 	}
-	@Deprecated 
-	/**
-	 * TOO SLOW
-	 * @param raterablePoints
-	 */
-	public void computeHitPoints(Vector<RaterablePoints> raterablePoints) {
-		/*
-		 * trace the hit points in the vector and assign the number of them to
-		 * numberofPointsHit
-		 */
-		for (RaterablePoints raterablePoints2 : raterablePoints) {
-			if (DistanceCalculator.isInGrid(this, raterablePoints2)) {
-				// System.out.println("hello");
-				hitPoints.add(raterablePoints2);
-				raterablePoints2.setHitGrid(this);
-			}
-		}
-		setNumberOfPointsHit(hitPoints.size());
-	}
-	public int getNumberOfPointsHit(){
+
+	public int getNumberOfPointsHit() {
 		return hitPoints.size();
 	}
 
-	public void addPoint(RaterablePoints point) {
+	public void addPoint(DataPoint point) {
 		hitPoints.add(point);
-		
 	}
+
+	public Integer getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Integer weight) {
+		this.weight = weight;
+	}
+
+	public Double getDistanceWeight() {
+		return distanceWeight;
+	}
+
+	public void setDistanceWeight(Double distanceWeight) {
+		this.distanceWeight = distanceWeight;
+	}
+
+	public List<DataPoint> getHitPoints() {
+		return hitPoints;
+	}
+
+
+	public boolean isDensity() {
+		return isDensity;
+	}
+
+	public void setDensity(boolean isDensity) {
+		this.isDensity = isDensity;
+	}
+	@Override
+	public String toString() {
+		String s="";
+		for(Double i:getLocals()){
+			s+=i.intValue()+",";
+		}
+		return s;
+	}
+	
+
 }

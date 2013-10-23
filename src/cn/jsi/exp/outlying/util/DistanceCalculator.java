@@ -7,7 +7,9 @@ import java.util.Vector;
 import org.apache.log4j.Logger;
 
 import cn.jsi.exp.outlying.detection.Grid;
-import cn.jsi.exp.outlying.detection.RaterablePoints;
+import cn.jsi.exp.outlying.detection.DataPoint;
+import cn.jsi.exp.outlying.detection.SpaceDivider;
+import cn.jsi.exp.outlying.setting.SystemParameters;
 
 /**
  * 
@@ -17,7 +19,6 @@ import cn.jsi.exp.outlying.detection.RaterablePoints;
  * @author Yulang RobinMeng
  * 
  */
-// TODO It is only useful for 2D,and is not applicable for 3D or moreD.
 
 public abstract class DistanceCalculator {
 	private static final Logger log = Logger
@@ -32,7 +33,7 @@ public abstract class DistanceCalculator {
 	 *            point2
 	 * @return the doubled distance
 	 */
-	public static double computeDistance(RaterablePoints p1, RaterablePoints p2) {
+	public static double computeDistance(DataPoint p1, DataPoint p2) {
 		double a = 0d;
 		List<Double> d1 = p1.getLocals();
 		List<Double> d2 = p2.getLocals();
@@ -51,7 +52,7 @@ public abstract class DistanceCalculator {
 	 *            grid
 	 * @return a doubled value notify the distance.
 	 */
-	public static double computeDistance(RaterablePoints p, Grid g) {
+	public static double computeDistance(DataPoint p, Grid g) {
 		if (isInGrid(g, p)) {
 			return 0;
 		}
@@ -74,7 +75,7 @@ public abstract class DistanceCalculator {
 		return Math.sqrt(distance2);
 	}
 
-	public static boolean isInGrid(Grid g, RaterablePoints p) {
+	public static boolean isInGrid(Grid g, DataPoint p) {
 		boolean isInGrid = true;
 		List<Double> d1 = g.getLocals();
 		List<Double> d2 = g.getWidths();
@@ -97,25 +98,44 @@ public abstract class DistanceCalculator {
 		}
 		return isInGrid;
 	}
-	public  static void findNearest(List<Grid> grids, RaterablePoints point) {
-		double tmpmin=0,curDistance=0;
-		Grid tmpGrid = null;
-		for (Grid grid : grids) {
-			if ((grid.isDensity==false) || (point.getHitGrid().equals(grid))) {
-				//TODO == or equals?
-				continue;
-			} else if (tmpmin==0) {
-				tmpGrid=grid;
-				tmpmin = DistanceCalculator.computeDistance(point, grid);
-			} else {
-				curDistance = DistanceCalculator.computeDistance(point, grid);
-				if (tmpmin>curDistance) {
-					tmpGrid = grid;
-				}
-				tmpmin = Math.min(curDistance, tmpmin);
-			}
-		}
-		point.setNearestGrid(tmpGrid);
-		//return tmpGrid;
-	}
+//	public  static Grid findNearest(List<Grid> grids, DataPoint point) {
+//		double tmpmin=0,curDistance=0;
+//		Grid tmpGrid = null;
+//		for (Grid grid : grids) {
+//			if ((grid.isDensity==false) || (point.getHitGrid().equals(grid))) {
+//				//TODO == or equals?
+//				continue;
+//			} else if (tmpmin==0) {
+//				tmpGrid=grid;
+//				tmpmin = DistanceCalculator.computeDistance(point, grid);
+//			} else {
+//				curDistance = DistanceCalculator.computeDistance(point, grid);
+//				if (tmpmin>curDistance) {
+//					tmpGrid = grid;
+//				}
+//				tmpmin = Math.min(curDistance, tmpmin);
+//			}
+//		}
+//		return tmpGrid;
+//	}
+//	public static List<Grid> findNearGridList(DataPoint point){
+//		List<Grid> nearGridList=new ArrayList<Grid>();
+//		List<Double> locals=point.getLocals();
+//		SpaceDivider spaceDivider = SpaceDivider.getInstance();
+//		for(int i=0;i<SystemParameters.dimensionNumber;i++){
+//			Double localx=locals.get(i);
+//			localx=localx+SystemParameters.divideLength;
+//			locals.set(i, localx);
+//			Grid tmpGrid=spaceDivider.getTheGridAccordingToLocal(locals);
+//			nearGridList.add(tmpGrid);
+//			
+//			localx=localx-2*SystemParameters.divideLength;
+//			locals.set(i, localx);
+//			Grid tmpGrid2=spaceDivider.getTheGridAccordingToLocal(locals);
+//			nearGridList.add(tmpGrid2);
+//		}
+////		spaceDivider.getCurrentGrids();
+//		return nearGridList;
+//	}
+	
 }
