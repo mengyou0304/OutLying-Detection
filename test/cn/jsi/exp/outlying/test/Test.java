@@ -13,6 +13,7 @@ import cn.jsi.exp.outlying.detection.DetectMethods;
 import cn.jsi.exp.outlying.detection.OutlierDetector;
 import cn.jsi.exp.outlying.detection.DataPoint;
 import cn.jsi.exp.outlying.detection.SpaceDivider;
+import cn.jsi.exp.outlying.setting.SystemParameters;
 import cn.jsi.exp.outlying.util.DistanceCalculator;
 
 /**
@@ -32,7 +33,7 @@ public class Test {
 		return historicalData;
 	}
 
-	public List<DataPoint>  level1(List<DataPoint> historicalData) {
+	public List<DataPoint> level1(List<DataPoint> historicalData) {
 		// First we init the divider to divide the space into pieces
 		SpaceDivider spaceDivider = SpaceDivider.getInstance();
 		// Second we input the historical data to count the hitpoints of the
@@ -51,7 +52,7 @@ public class Test {
 		for (DataPoint p : possibleOutlierPoints) {
 			s += p + "\n";
 		}
-		log.info(s);
+		// log.info(s);
 
 		// It seems to the end, but we further discover that some normal point
 		// also be treated as abnomal ones due to the reason that they are
@@ -60,32 +61,46 @@ public class Test {
 
 		List<DataPoint> Outlier = OutlierDetector.getOutlierRank(
 				possibleOutlierPoints, grids);
-		ArrayList<DataPoint> l2List=new ArrayList<DataPoint>();
+		ArrayList<DataPoint> l2List = new ArrayList<DataPoint>();
 		for (DataPoint point : Outlier) {
 			System.out.println(" out lyers score:  "
 					+ point.getScore().intValue() + "  " + point);
-			Double score=point.getScore();
-			List<Double> l2D=new ArrayList<Double>();
+			Double score = point.getScore();
+			List<Double> l2D = new ArrayList<Double>();
 			l2D.add(score);
-			DataPoint p=new DataPoint(l2D);
+			DataPoint p = new DataPoint(l2D);
 			p.setPointID(point.getPointID());
 			l2List.add(p);
 		}
+		log.info("==========================Level1 outlyer finish=================");
 		return l2List;
-		
+
 	}
 
 	public static void main(String[] args) {
 		Test t = new Test();
 		List<DataPoint> datalist = t.initData();
-		List<DataPoint> datalist2=t.level1(datalist);
-		t.level2(datalist2);
+		List<DataPoint> datalist2 = t.level1(datalist);
+		if (SystemParameters.use2LevelOutlying)
+			t.level2(datalist2);
 
 	}
 
 	private void level2(List<DataPoint> datalist2) {
-		// TODO Auto-generated method stub
-		
+		SpaceDivider spaceDivide = SpaceDivider.newInstance();
+		spaceDivide.inputPoint(datalist2);
+		List<Grid> grids = spaceDivide.getCurrentGrids();
+		log.info("After inserting the data we get grid number as"
+				+ grids.size());
+
+		List<DataPoint> possibleOutlierPoints = DetectMethods
+				.findOutOutlierBasedonThreshold(grids);
+		datalist2.removeAll(possibleOutlierPoints);
+		String s = "They are\n";
+		for (DataPoint p : datalist2) {
+			s += p + "\n";
+		}
+		log.info(s);
 	}
 
 }

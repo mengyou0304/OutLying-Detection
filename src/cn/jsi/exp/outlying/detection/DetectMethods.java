@@ -43,6 +43,7 @@ public class DetectMethods {
 				}
 			}
 		}
+		log.info("We get outLyer point number="+possibleOutliers.size());
 		return possibleOutliers;
 	}
 
@@ -84,7 +85,7 @@ public class DetectMethods {
 		Double score = 0d;
 		for (DataPoint point : pointList) {
 			NearestGridFinder gridfinder = new NearestGridFinder();
-			log.info("start finding grids for point: "+point);
+			log.debug("start finding grids for point: "+point);
 			List<Grid> gridList = gridfinder.getNLevelNearestGridList(
 					SystemParameters.nearGridLevel, point);
 			int usedGrid=0;
@@ -95,7 +96,7 @@ public class DetectMethods {
 				log.debug("score+="+grid.getNumberOfPointsHit()+"/"+grid.getDistanceWeight()+"="+score);
 				usedGrid++;
 			}
-			log.info("usedGrid is "+usedGrid);
+//			log.info("usedGrid is "+usedGrid);
 			point.setScore(score);
 			score = 0d;
 		}

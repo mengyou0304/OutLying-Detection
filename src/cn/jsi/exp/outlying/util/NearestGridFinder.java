@@ -32,7 +32,7 @@ public class NearestGridFinder {
 		currentLocalX.clear();
 		nearGridList.clear();
 		originLocalX=SpaceDivider.getInstance().getGridNumbersByLocalValues(point.getLocals());
-		log.info("originalX is"+originLocalX);
+		log.debug("originalX is"+originLocalX);
 		currentLocalX.addAll(originLocalX);
 		allLevel=computedLevel;
 		recrusion(0);

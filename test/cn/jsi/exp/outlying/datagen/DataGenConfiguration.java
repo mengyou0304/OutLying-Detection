@@ -7,7 +7,7 @@ public class DataGenConfiguration {
 	 */
 	public static  int dimensionNumber=3;
 	public static  int pointSetNumber=2;
-	public static  int pointNumber=100;
+	public static  int pointNumber=1000;
 //	public static  int pointSetDiameter=10;
 	public static  String pointDistribution=DISTRIBUTION_AVERAGE;
 	

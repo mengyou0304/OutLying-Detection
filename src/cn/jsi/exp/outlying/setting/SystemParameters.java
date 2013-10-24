@@ -5,4 +5,7 @@ public class SystemParameters {
 //	public static  int dimensionNumber=3;
 	public static int nearGridLevel=1;
 	public static final Double divideLength=3d; 
+	
+	public static boolean use2LevelOutlying=true;
+	
 }
