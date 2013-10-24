@@ -22,7 +22,7 @@ public class DataGenerator {
 			for (int pointNumber = 0; pointNumber < DataGenConfiguration.pointNumber; pointNumber++) {
 				ArrayList<Double> p1local = new ArrayList<Double>();
 				for (int demensionNumber = 0; demensionNumber < DataGenConfiguration.dimensionNumber; demensionNumber++) {
-					p1local.add(Double.parseDouble(String.valueOf(baseValue+r.nextInt(10))));
+					p1local.add(Double.parseDouble(String.valueOf(baseValue+r.nextInt(DataGenConfiguration.pointSetDiameter))));
 				}
 				DataPoint p1 = new DataPoint(p1local);
 				p1.setPointID("Set"+baseValue+"_"+pointNumber);
