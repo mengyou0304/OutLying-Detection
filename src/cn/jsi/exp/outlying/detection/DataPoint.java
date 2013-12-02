@@ -1,23 +1,28 @@
 package cn.jsi.exp.outlying.detection;
 
-import java.awt.Point;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import cn.jsi.exp.outlying.setting.SystemParameters;
+
 public class DataPoint implements Comparable<DataPoint> {
 	private static final Logger log = Logger.getLogger(DataPoint.class);
-
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private Double score = 0d;
-	private String pointID="";
+	private String pointID = "";
+	private String pointType = "";
 	private Grid nearestGrid;
 	private Grid hitGrid;
 	private List<Double> locals;
+
+	public DataPoint() {
+
+	}
 
 	public DataPoint(List<Double> local) {
 		locals = local;
@@ -61,7 +66,6 @@ public class DataPoint implements Comparable<DataPoint> {
 			return 0;
 		}
 	}
-	
 
 	public String getPointID() {
 		return pointID;
@@ -71,15 +75,33 @@ public class DataPoint implements Comparable<DataPoint> {
 		this.pointID = pointID;
 	}
 
+	public String getPointType() {
+		return pointType;
+	}
+
+	public void setPointType(String pointType) {
+		this.pointType = pointType;
+	}
+
 	@Override
 	public String toString() {
-		String s = pointID+"\t";
-		for (Double d : locals) {
-			s+=d.intValue()+",";
+		String s = pointID + "\t";
+		if (SystemParameters.showPointAxis) {
+			for (Double d : locals) {
+				s += d.intValue() + ",";
+			}
+			s = s.substring(0, s.length() - 1);
 		}
-		s=s.substring(0,s.length()-1);
 		return s;
+	}
 
+	public String toFileData() {
+		String s=pointID+",";
+		for (Double d : locals) {
+			s += d.intValue() + ",";
+		}
+		s+=getScore().intValue();
+		return s;
 	}
 
 }

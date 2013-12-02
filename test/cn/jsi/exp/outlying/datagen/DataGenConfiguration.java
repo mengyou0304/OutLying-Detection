@@ -17,7 +17,7 @@ public class DataGenConfiguration {
 	/**
 	 * 每个正常数据集合的半径
 	 */
-	public static  int pointSetDiameter=10;
+	public static  int pointSetDiameter=20;
 	/**
 	 * 正常数据集合的数据分布
 	 */

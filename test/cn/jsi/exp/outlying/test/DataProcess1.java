@@ -1,44 +1,44 @@
 package cn.jsi.exp.outlying.test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Random;
-import java.util.Vector;
 
 import org.apache.log4j.Logger;
 
+import cn.jsi.exp.outlying.analyz.Analyzer;
+import cn.jsi.exp.outlying.analyz.ErrorEventController;
+import cn.jsi.exp.outlying.butil.FileUtility;
+import cn.jsi.exp.outlying.butil.Locator;
 import cn.jsi.exp.outlying.datagen.DataGenerator;
-import cn.jsi.exp.outlying.detection.Grid;
-import cn.jsi.exp.outlying.detection.DetectMethods;
-import cn.jsi.exp.outlying.detection.OutlierDetector;
 import cn.jsi.exp.outlying.detection.DataPoint;
+import cn.jsi.exp.outlying.detection.DetectMethods;
+import cn.jsi.exp.outlying.detection.Grid;
+import cn.jsi.exp.outlying.detection.OutlierDetector;
 import cn.jsi.exp.outlying.detection.SpaceDivider;
 import cn.jsi.exp.outlying.setting.SystemParameters;
-import cn.jsi.exp.outlying.util.DistanceCalculator;
 
-/**
- * The basic testcase to run the application
- * 
- * @author Robin_P4
- * 
- */
-public class Test {
-	private static final Logger log = Logger.getLogger(Test.class);
+public class DataProcess1 {
+	private static final Logger log = Logger.getLogger(DataProcess1.class);
+	private static SpaceDivider spaceDivider = SpaceDivider.getInstance();
 
-	public List<DataPoint> initData() {
-		// init the input data
-		List<DataPoint> historicalData = DataGenerator.getHistoricalData();
-		log.info("now we are going to insert testing point of number: "
-				+ historicalData.size());
-		return historicalData;
+	public void initData() {
+		ErrorEventController.init();
+		String baseUrl = Locator.getInstance().getBaseLocation();
+		FileUtility.readFromFileStream(baseUrl + "d2.csv");
+		System.out.println("finish reading");
 	}
 
-	public List<DataPoint> level1(List<DataPoint> historicalData) {
+	public void onDataPointArrive(List<DataPoint> historicalData) {
 		// First we init the divider to divide the space into pieces
-		SpaceDivider spaceDivider = SpaceDivider.getInstance();
+		spaceDivider = SpaceDivider.getInstance();
 		// Second we input the historical data to count the hitpoints of the
 		// girds
 		spaceDivider.inputPoint(historicalData);
+	}
+
+	public List<DataPoint> level1Process() {
+
 		// After input the points into the grids, we should find which girds are
 		// filled with points and find the nomral grids and abnormal grids based
 		// on the points in it
@@ -48,10 +48,8 @@ public class Test {
 
 		List<DataPoint> possibleOutlierPoints = DetectMethods
 				.findOutOutlierBasedonThreshold(grids);
-		String s = "They are\n";
-		for (DataPoint p : possibleOutlierPoints) {
-			s += p + "\n";
-		}
+		List<Grid> normalGrid=DetectMethods.getNormalGrids(grids);
+		
 		// log.info(s);
 
 		// It seems to the end, but we further discover that some normal point
@@ -60,30 +58,34 @@ public class Test {
 		// and treat them as normal points
 
 		List<DataPoint> Outlier = OutlierDetector.getOutlierRank(
-				possibleOutlierPoints, grids);
-		
+				possibleOutlierPoints, normalGrid);
+		Analyzer.analyze(Outlier);
+		System.out.println("=================Level1 analyz finish=====================");
 		ArrayList<DataPoint> l2List = new ArrayList<DataPoint>();
-		for (DataPoint point : Outlier) {
-			System.out.println(" out lyers score:  "
-					+ point.getScore().intValue() + "  " + point);
-			Double score = point.getScore();
-			List<Double> l2D = new ArrayList<Double>();
-			l2D.add(score);
-			DataPoint p = new DataPoint(l2D);
-			p.setPointID(point.getPointID());
-			l2List.add(p);
-		}
+//		for (DataPoint point : Outlier) {
+//			System.out.println(" out lyers score:  "
+//					+ point.getScore().intValue() + "  " + point);
+//			Double score = point.getScore();
+//			List<Double> l2D = new ArrayList<Double>();
+//			l2D.add(score);
+//			DataPoint p = new DataPoint(l2D);
+//			p.setPointID(point.getPointID());
+//			l2List.add(p);
+//		}
 		log.info("==========================Level1 outlyer finish=================");
 		return l2List;
 
 	}
 
 	public static void main(String[] args) {
-		Test t = new Test();
-		List<DataPoint> datalist = t.initData();
-		List<DataPoint> datalist2 = t.level1(datalist);
+		DataProcess1 t = new DataProcess1();
+		t.initData();
+		List<DataPoint> datalist2 = t.level1Process();
 		if (SystemParameters.use2LevelOutlying)
 			t.level2(datalist2);
+		for(String s: ErrorEventController.newlist){
+			System.out.println(s);
+		}
 
 	}
 
@@ -103,5 +105,5 @@ public class Test {
 		}
 		log.info(s);
 	}
-
+	
 }

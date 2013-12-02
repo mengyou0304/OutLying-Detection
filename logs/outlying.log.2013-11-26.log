@@ -1,0 +1,3288 @@
+2013-11-26 07:38:04,317 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 07:38:04,770 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 07:38:04,785 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 07:38:04,817 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 07:38:04,910 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 07:38:04,942 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 07:38:05,442 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as210
+2013-11-26 07:38:05,442 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=874
+2013-11-26 07:38:31,473 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+0	pod.2	
+0	pod.7	
+0	multihop.1	
+0	saint.2	
+0	xsnoop.0	
+0	smurf.5	
+1	saint.7	
+1	named.2	
+2	ipsweep.2	
+2	ipsweep.3	
+2	ipsweep.5	
+2	ipsweep.6	
+2	ipsweep.7	
+2	ipsweep.8	
+2	ipsweep.9	
+2	ipsweep.10	
+2	named.3	
+2	pod.3	
+3	portsweep.5	
+3	pod.4	
+3	pod.5	
+3	portsweep.2	
+3	pod.9	
+3	pod.10	
+4	smurf.6	
+4	smurf.8	
+4	smurf.9	
+4	smurf.10	
+4	named.6	
+4	portsweep.8	
+4	portsweep.9	
+4	portsweep.10	
+4	named.7	
+5	pod.6	
+5	pod.8	
+5	saint.3	
+5	saint.4	
+5	portsweep.0	
+5	portsweep.1	
+6	saint.10	
+6	named.8	
+6	saint.8	
+6	saint.9	
+6	saint.5	
+6	saint.6	
+6	saint.1	
+7	named.9	
+7	portsweep.3	
+7	portsweep.4	
+7	portsweep.6	
+7	portsweep.7	
+8	ipsweep.1	
+8	saint.0	
+9	smurf.3	
+15	xlock.4	
+15	pod.0	
+22	buffer_overflo0	
+29	smurf.7	
+31	named.5	
+36	smurf.0	
+36	smurf.1	
+36	smurf.2	
+36	smurf.4	
+478	named.4	
+977	apache2.8	
+977	apache2.9	
+977	apache2.10	
+991	named.1	
+991	ipsweep.0	
+991	ipsweep.4	
+991	multihop.2	
+991	sendmail.4	
+991	pod.1	
+1378	apache2.0	
+1378	apache2.1	
+1378	apache2.2	
+1378	apache2.3	
+1378	apache2.4	
+1378	apache2.5	
+1378	apache2.6	
+1378	apache2.7	
+
+
+
+Normal values
+0:6
+1:10
+2:4
+3:12
+4:8
+5:2
+6:5
+7:2
+8:9
+9:10
+10:3
+11:11
+12:2
+13:2
+14:13
+15:18
+16:4
+17:1
+18:5
+19:5
+20:0
+21:8
+22:1
+23:0
+24:1
+25:0
+26:0
+27:0
+28:0
+29:0
+30:0
+31:0
+32:0
+33:0
+34:0
+35:0
+36:0
+37:1
+38:0
+39:0
+40:0
+41:0
+42:0
+43:0
+44:0
+45:1
+46:0
+47:1
+48:3
+49:0
+50:0
+51:0
+52:0
+53:0
+54:0
+55:0
+56:1
+57:2
+58:0
+59:0
+60:0
+61:3
+62:0
+63:3
+64:0
+65:5
+66:0
+67:0
+68:0
+69:0
+70:0
+71:0
+72:0
+73:0
+74:0
+75:0
+76:0
+77:0
+78:0
+79:0
+80:0
+81:0
+82:0
+83:0
+84:0
+85:0
+86:0
+87:0
+88:0
+89:0
+90:0
+91:0
+92:0
+93:0
+94:1
+95:0
+96:0
+97:0
+98:0
+99:0
+100:0
+101:0
+102:0
+103:0
+104:0
+105:0
+106:0
+107:1
+108:0
+109:0
+110:0
+111:0
+112:0
+113:0
+114:7
+115:0
+116:0
+117:3
+118:0
+119:17
+
+2013-11-26 07:38:31,473 INFO  [main] analyz.Analyzer   (Analyzer.java:56)     - For anomalies:
+phf. : 0/1
+xsnoop. : 1/2
+apache2. : 11/11
+multihop. : 2/4
+smurf. : 11/11
+named. : 9/10
+snmpgetattack. : 0/11
+udpstorm. : 0/1
+buffer_overflo : 1/3
+saint. : 11/11
+sendmail. : 1/6
+ipsweep. : 11/11
+pod. : 11/11
+xlock. : 1/6
+portsweep. : 11/11
+guess_passwd. : 0/2
+
+In all........81/112  =72%
+2013-11-26 07:38:31,473 INFO  [main] test.DataProcess1 (DataProcess1.java:74)     - ==========================Level1 outlyer finish=================
+2013-11-26 07:56:01,832 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as0
+2013-11-26 07:56:01,832 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=0
+2013-11-26 07:56:01,832 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+
+
+
+Normal values
+0:0
+1:0
+2:0
+3:0
+4:0
+5:0
+6:0
+7:0
+8:0
+9:0
+10:0
+11:0
+12:0
+13:0
+14:0
+15:0
+16:0
+17:0
+18:0
+19:0
+20:0
+21:0
+22:0
+23:0
+24:0
+25:0
+26:0
+27:0
+28:0
+29:0
+30:0
+31:0
+32:0
+33:0
+34:0
+35:0
+36:0
+37:0
+38:0
+39:0
+40:0
+41:0
+42:0
+43:0
+44:0
+45:0
+46:0
+47:0
+48:0
+49:0
+50:0
+51:0
+52:0
+53:0
+54:0
+55:0
+56:0
+57:0
+58:0
+59:0
+60:0
+61:0
+62:0
+63:0
+64:0
+65:0
+66:0
+67:0
+68:0
+69:0
+70:0
+71:0
+72:0
+73:0
+74:0
+75:0
+76:0
+77:0
+78:0
+79:0
+80:0
+81:0
+82:0
+83:0
+84:0
+85:0
+86:0
+87:0
+88:0
+89:0
+90:0
+91:0
+92:0
+93:0
+94:0
+95:0
+96:0
+97:0
+98:0
+99:0
+100:0
+101:0
+102:0
+103:0
+104:0
+105:0
+106:0
+107:0
+108:0
+109:0
+110:0
+111:0
+112:0
+113:0
+114:0
+115:0
+116:0
+117:0
+118:0
+119:0
+
+2013-11-26 07:56:33,645 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 07:56:34,082 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 07:56:34,098 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 07:56:34,114 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 07:56:34,129 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 07:56:34,160 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 07:56:34,660 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as198
+2013-11-26 07:56:34,660 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=766
+2013-11-26 07:56:55,348 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+0	pod.7	
+0	multihop.1	
+0	pod.2	
+0	ipsweep.1	
+0	ipsweep.2	
+0	ipsweep.3	
+0	ipsweep.5	
+0	ipsweep.6	
+0	ipsweep.7	
+0	ipsweep.8	
+0	ipsweep.9	
+0	ipsweep.10	
+0	saint.2	
+0	xsnoop.0	
+0	smurf.5	
+0	portsweep.2	
+0	portsweep.5	
+1	pod.3	
+2	named.6	
+2	saint.7	
+4	pod.5	
+4	pod.6	
+4	pod.8	
+4	saint.0	
+4	saint.1	
+4	portsweep.6	
+4	portsweep.7	
+4	portsweep.8	
+4	portsweep.9	
+4	portsweep.10	
+4	pod.4	
+4	pod.9	
+4	pod.10	
+4	saint.8	
+5	saint.9	
+5	saint.10	
+6	saint.4	
+6	saint.5	
+6	saint.6	
+6	smurf.0	
+6	smurf.1	
+6	smurf.3	
+6	smurf.6	
+6	smurf.10	
+6	named.8	
+7	portsweep.0	
+7	smurf.2	
+7	smurf.4	
+7	portsweep.1	
+7	portsweep.3	
+7	portsweep.4	
+8	saint.3	
+9	named.7	
+9	named.9	
+15	named.5	
+16	xlock.4	
+18	pod.0	
+21	smurf.8	
+25	smurf.7	
+25	smurf.9	
+63	named.4	
+64	named.2	
+64	named.3	
+691	buffer_overflo0	
+1088	apache2.0	
+1088	apache2.1	
+1088	apache2.2	
+1088	apache2.3	
+1088	apache2.4	
+1088	apache2.5	
+1088	apache2.6	
+1088	apache2.7	
+1088	apache2.8	
+1088	apache2.9	
+1088	apache2.10	
+1097	xlock.3	
+1545	xlock.0	
+1545	xlock.5	
+1545	multihop.0	
+1545	multihop.3	
+1545	sendmail.0	
+1545	sendmail.3	
+2662	named.0	
+2662	xlock.1	
+2662	xlock.2	
+2662	xsnoop.1	
+2662	sendmail.2	
+2662	guess_passwd.0	
+2662	guess_passwd.1	
+2662	sendmail.5	
+
+
+
+Normal values
+0:11
+1:9
+2:7
+3:4
+4:7
+5:2
+6:6
+7:3
+8:6
+9:1
+10:7
+11:12
+12:6
+13:2
+14:9
+15:11
+16:8
+17:6
+18:9
+19:0
+20:3
+21:0
+22:1
+23:1
+24:3
+25:0
+26:0
+27:2
+28:2
+29:2
+30:0
+31:0
+32:0
+33:0
+34:0
+35:0
+36:0
+37:0
+38:0
+39:0
+40:0
+41:0
+42:0
+43:0
+44:0
+45:0
+46:0
+47:0
+48:0
+49:0
+50:0
+51:0
+52:0
+53:0
+54:0
+55:4
+56:2
+57:0
+58:0
+59:0
+60:0
+61:5
+62:0
+63:2
+64:1
+65:0
+66:0
+67:0
+68:0
+69:0
+70:0
+71:0
+72:0
+73:0
+74:0
+75:0
+76:0
+77:0
+78:0
+79:0
+80:3
+81:0
+82:2
+83:16
+84:0
+85:0
+86:0
+87:0
+88:0
+89:0
+90:0
+91:0
+92:0
+93:0
+94:0
+95:0
+96:0
+97:4
+98:0
+99:0
+100:0
+101:0
+102:4
+103:0
+104:0
+105:0
+106:0
+107:0
+108:0
+109:0
+110:0
+111:0
+112:0
+113:0
+114:0
+115:1
+116:0
+117:0
+118:0
+119:0
+
+2013-11-26 07:56:55,348 INFO  [main] analyz.Analyzer   (Analyzer.java:56)     - For anomalies:
+phf. : 0/1
+xsnoop. : 2/2
+apache2. : 11/11
+multihop. : 3/4
+smurf. : 11/11
+named. : 9/10
+snmpgetattack. : 0/11
+udpstorm. : 0/1
+buffer_overflo : 1/3
+saint. : 11/11
+sendmail. : 4/6
+ipsweep. : 9/11
+pod. : 10/11
+xlock. : 6/6
+portsweep. : 11/11
+guess_passwd. : 2/2
+
+In all........90/112  =80%
+2013-11-26 07:56:55,348 INFO  [main] test.DataProcess1 (DataProcess1.java:74)     - ==========================Level1 outlyer finish=================
+2013-11-26 07:58:50,645 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 07:58:51,067 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 07:58:51,098 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 07:58:51,114 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 07:58:51,129 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 07:58:51,160 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 07:58:51,645 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as198
+2013-11-26 07:58:51,645 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=766
+2013-11-26 08:00:38,129 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+0	pod.7	
+0	multihop.1	
+0	ipsweep.1	
+0	ipsweep.2	
+0	ipsweep.3	
+0	ipsweep.5	
+0	ipsweep.6	
+0	ipsweep.7	
+0	ipsweep.8	
+0	ipsweep.9	
+0	ipsweep.10	
+0	pod.2	
+0	xsnoop.0	
+1	smurf.5	
+2	pod.3	
+2	saint.2	
+3	pod.5	
+3	pod.6	
+3	pod.8	
+4	pod.9	
+4	pod.10	
+4	pod.4	
+4	saint.7	
+4	portsweep.6	
+4	portsweep.7	
+4	portsweep.8	
+4	portsweep.9	
+4	portsweep.10	
+5	saint.0	
+5	saint.1	
+6	named.6	
+6	saint.9	
+6	saint.8	
+6	saint.10	
+7	saint.4	
+7	saint.5	
+7	saint.6	
+8	portsweep.0	
+8	portsweep.1	
+8	portsweep.3	
+8	portsweep.4	
+10	saint.3	
+14	named.8	
+18	pod.0	
+19	xlock.4	
+25	named.7	
+25	named.9	
+53	smurf.2	
+53	smurf.4	
+54	named.5	
+60	smurf.0	
+60	smurf.1	
+60	smurf.3	
+60	smurf.6	
+60	smurf.10	
+106	smurf.8	
+116	smurf.7	
+116	smurf.9	
+134	named.2	
+134	named.3	
+192	portsweep.2	
+192	portsweep.5	
+453	named.4	
+717	buffer_overflo0	
+1177	apache2.0	
+1177	apache2.1	
+1177	apache2.2	
+1177	apache2.3	
+1177	apache2.4	
+1177	apache2.5	
+1177	apache2.6	
+1177	apache2.7	
+1177	apache2.8	
+1177	apache2.9	
+1177	apache2.10	
+1306	xlock.3	
+1640	xlock.0	
+1640	xlock.5	
+1640	multihop.0	
+1640	multihop.3	
+1640	sendmail.0	
+1640	sendmail.3	
+2764	named.0	
+2764	xlock.1	
+2764	xlock.2	
+2764	xsnoop.1	
+2764	sendmail.2	
+2764	guess_passwd.0	
+2764	guess_passwd.1	
+2764	sendmail.5	
+
+
+
+Normal values
+0:10
+1:8
+2:2
+3:4
+4:6
+5:3
+6:7
+7:2
+8:2
+9:0
+10:2
+11:0
+12:13
+13:8
+14:3
+15:0
+16:11
+17:8
+18:7
+19:4
+20:9
+21:2
+22:2
+23:4
+24:1
+25:0
+26:1
+27:0
+28:0
+29:0
+30:0
+31:1
+32:0
+33:3
+34:0
+35:1
+36:2
+37:0
+38:0
+39:0
+40:2
+41:0
+42:2
+43:0
+44:0
+45:0
+46:0
+47:0
+48:0
+49:0
+50:1
+51:0
+52:0
+53:0
+54:1
+55:0
+56:0
+57:0
+58:0
+59:0
+60:0
+61:1
+62:0
+63:0
+64:1
+65:0
+66:0
+67:0
+68:0
+69:0
+70:0
+71:0
+72:0
+73:0
+74:0
+75:0
+76:0
+77:0
+78:0
+79:0
+80:0
+81:0
+82:0
+83:2
+84:2
+85:0
+86:0
+87:0
+88:0
+89:0
+90:0
+91:0
+92:0
+93:0
+94:0
+95:0
+96:0
+97:0
+98:0
+99:0
+100:0
+101:0
+102:4
+103:0
+104:0
+105:0
+106:0
+107:3
+108:0
+109:2
+110:0
+111:0
+112:0
+113:0
+114:0
+115:0
+116:0
+117:0
+118:0
+119:0
+
+2013-11-26 08:00:38,129 INFO  [main] analyz.Analyzer   (Analyzer.java:56)     - For anomalies:
+phf. : 0/1
+xsnoop. : 2/2
+apache2. : 11/11
+multihop. : 3/4
+smurf. : 11/11
+named. : 9/10
+snmpgetattack. : 0/11
+udpstorm. : 0/1
+buffer_overflo : 1/3
+saint. : 11/11
+sendmail. : 4/6
+ipsweep. : 9/11
+pod. : 10/11
+xlock. : 6/6
+portsweep. : 11/11
+guess_passwd. : 2/2
+
+In all........90/112  =80%
+2013-11-26 08:00:38,129 INFO  [main] test.DataProcess1 (DataProcess1.java:74)     - ==========================Level1 outlyer finish=================
+2013-11-26 08:06:24,364 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 08:06:24,504 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 08:06:24,910 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 08:06:24,926 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 08:06:24,942 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 08:06:24,973 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 08:06:24,989 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 6000 data
+2013-11-26 08:06:25,004 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 7000 data
+2013-11-26 08:06:25,020 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 8000 data
+2013-11-26 08:06:25,504 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as252
+2013-11-26 08:06:25,504 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=1172
+2013-11-26 08:06:29,723 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 08:06:29,864 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 08:06:30,270 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 08:06:30,285 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 08:06:30,301 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 08:06:30,317 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 08:06:30,332 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 6000 data
+2013-11-26 08:06:30,348 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 7000 data
+2013-11-26 08:06:30,364 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 8000 data
+2013-11-26 08:06:30,864 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as252
+2013-11-26 08:06:30,864 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=1172
+2013-11-26 08:06:33,567 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+0	pod.7	
+0	saint.7	
+0	saint.618	
+0	pod.11	
+0	multihop.1	
+0	saint.2	
+0	smurf.5	
+0	saint.307	
+0	named.2	
+0	named.3	
+0	pod.2	
+0	portsweep.2	
+0	portsweep.5	
+0	portsweep.21	
+1	pod.3	
+1	named.6	
+1	saint.4	
+1	saint.5	
+1	saint.6	
+2	saint.43	
+2	saint.45	
+3	snmpgetattack.103	
+3	portsweep.45	
+3	portsweep.59	
+3	portsweep.84	
+3	portsweep.88	
+3	portsweep.89	
+3	portsweep.93	
+3	portsweep.96	
+3	portsweep.98	
+3	portsweep.104	
+4	saint.8	
+5	pod.4	
+5	portsweep.0	
+5	saint.604	
+6	named.8	
+6	named.5	
+6	saint.10	
+6	saint.11	
+7	pod.5	
+7	pod.6	
+7	pod.8	
+7	portsweep.6	
+7	portsweep.7	
+7	portsweep.8	
+7	portsweep.9	
+7	portsweep.10	
+7	smurf.2	
+7	smurf.4	
+7	saint.9	
+7	portsweep.1	
+7	portsweep.3	
+7	portsweep.4	
+7	smurf.0	
+7	smurf.1	
+7	smurf.3	
+7	smurf.6	
+7	smurf.10	
+7	named.4	
+8	saint.14	
+8	saint.15	
+8	portsweep.11	
+8	portsweep.12	
+8	portsweep.13	
+8	portsweep.14	
+8	named.7	
+8	named.9	
+8	saint.18	
+8	saint.19	
+8	saint.20	
+8	portsweep.19	
+8	portsweep.20	
+8	portsweep.22	
+8	portsweep.23	
+9	saint.101	
+9	saint.106	
+9	saint.125	
+9	saint.130	
+9	saint.135	
+9	saint.140	
+9	saint.234	
+9	saint.248	
+9	saint.258	
+9	saint.344	
+9	saint.363	
+9	saint.374	
+9	saint.382	
+9	saint.390	
+9	saint.393	
+9	saint.398	
+9	saint.419	
+9	saint.424	
+9	saint.482	
+9	saint.487	
+9	saint.502	
+9	saint.564	
+9	saint.588	
+9	saint.3	
+9	pod.12	
+9	pod.13	
+9	pod.14	
+9	pod.15	
+9	pod.16	
+9	pod.20	
+10	buffer_overflo0	
+10	saint.0	
+10	saint.1	
+10	portsweep.94	
+10	snmpgetattack.433	
+10	snmpgetattack.453	
+10	snmpgetattack.260	
+10	snmpgetattack.479	
+10	saint.615	
+12	smurf.12	
+12	smurf.14	
+12	smurf.16	
+12	smurf.18	
+12	saint.12	
+12	saint.13	
+12	snmpgetattack.151	
+12	snmpgetattack.780	
+13	saint.599	
+13	saint.16	
+13	saint.17	
+13	saint.605	
+13	saint.606	
+13	saint.609	
+13	saint.610	
+13	saint.611	
+13	saint.612	
+13	saint.614	
+14	pod.9	
+14	pod.10	
+16	saint.620	
+17	pod.17	
+17	pod.18	
+17	pod.19	
+17	smurf.8	
+18	portsweep.16	
+18	portsweep.17	
+18	portsweep.18	
+18	saint.608	
+18	saint.613	
+18	smurf.7	
+18	smurf.9	
+18	smurf.11	
+18	smurf.13	
+19	saint.600	
+19	saint.619	
+21	saint.601	
+21	saint.603	
+21	saint.607	
+21	saint.617	
+22	portsweep.15	
+23	saint.598	
+25	saint.63	
+25	saint.79	
+25	saint.84	
+25	saint.157	
+25	saint.167	
+25	saint.172	
+25	saint.191	
+25	saint.296	
+26	snmpgetattack.662	
+27	saint.29	
+27	saint.31	
+28	saint.616	
+31	xlock.4	
+31	pod.0	
+32	saint.602	
+40	apache2.216	
+40	apache2.217	
+40	apache2.218	
+40	apache2.219	
+40	apache2.220	
+40	apache2.221	
+40	apache2.222	
+40	apache2.223	
+40	apache2.224	
+40	apache2.225	
+40	apache2.226	
+40	apache2.227	
+40	apache2.228	
+40	apache2.229	
+40	apache2.230	
+40	apache2.231	
+40	apache2.232	
+40	apache2.233	
+40	apache2.234	
+40	apache2.235	
+40	apache2.236	
+47	apache2.210	
+47	apache2.211	
+47	apache2.212	
+47	apache2.213	
+47	apache2.214	
+47	apache2.215	
+51	apache2.377	
+51	apache2.378	
+51	apache2.379	
+51	apache2.380	
+51	apache2.381	
+51	apache2.382	
+51	apache2.383	
+51	apache2.384	
+51	apache2.385	
+51	apache2.386	
+51	apache2.387	
+51	apache2.388	
+51	apache2.389	
+51	apache2.390	
+51	apache2.391	
+51	apache2.392	
+51	apache2.393	
+51	apache2.394	
+51	apache2.395	
+51	apache2.396	
+51	apache2.397	
+56	apache2.237	
+56	apache2.238	
+56	apache2.239	
+56	apache2.240	
+56	apache2.241	
+56	apache2.242	
+56	apache2.243	
+56	apache2.244	
+56	apache2.245	
+56	apache2.246	
+56	apache2.247	
+56	apache2.248	
+56	apache2.249	
+56	apache2.250	
+56	apache2.251	
+56	apache2.252	
+56	apache2.253	
+56	apache2.254	
+56	apache2.255	
+56	apache2.256	
+56	apache2.257	
+56	apache2.258	
+56	apache2.259	
+56	apache2.260	
+56	apache2.261	
+56	apache2.262	
+56	apache2.263	
+56	apache2.264	
+56	apache2.265	
+64	apache2.186	
+64	apache2.187	
+64	apache2.188	
+64	apache2.189	
+64	apache2.190	
+64	apache2.191	
+64	apache2.192	
+64	apache2.193	
+64	apache2.194	
+64	apache2.195	
+64	apache2.196	
+64	apache2.197	
+64	apache2.198	
+64	apache2.199	
+64	apache2.200	
+64	apache2.201	
+64	apache2.202	
+64	apache2.203	
+64	apache2.204	
+64	apache2.205	
+64	apache2.206	
+64	apache2.207	
+64	apache2.208	
+64	apache2.209	
+89	apache2.266	
+89	apache2.267	
+89	apache2.268	
+89	apache2.269	
+89	apache2.270	
+89	apache2.271	
+89	apache2.272	
+89	apache2.273	
+89	apache2.274	
+89	apache2.275	
+90	apache2.115	
+90	apache2.116	
+90	apache2.117	
+90	apache2.118	
+90	apache2.119	
+90	apache2.120	
+90	apache2.121	
+90	apache2.122	
+90	apache2.123	
+90	apache2.124	
+90	apache2.125	
+90	apache2.126	
+90	apache2.127	
+90	apache2.128	
+90	apache2.129	
+90	apache2.130	
+90	apache2.131	
+90	apache2.132	
+90	apache2.133	
+90	apache2.134	
+90	apache2.135	
+90	apache2.136	
+90	apache2.137	
+90	apache2.138	
+90	apache2.139	
+90	apache2.140	
+90	apache2.141	
+90	apache2.142	
+90	apache2.143	
+90	apache2.144	
+90	apache2.145	
+90	apache2.146	
+90	apache2.147	
+90	apache2.148	
+90	apache2.149	
+127	apache2.172	
+127	apache2.173	
+127	apache2.181	
+127	apache2.182	
+127	apache2.183	
+127	apache2.184	
+127	apache2.185	
+156	portsweep.26	
+162	xsnoop.0	
+197	portsweep.24	
+197	portsweep.25	
+214	portsweep.29	
+214	portsweep.30	
+214	portsweep.31	
+214	portsweep.32	
+214	portsweep.33	
+214	portsweep.34	
+214	portsweep.35	
+214	portsweep.36	
+214	portsweep.37	
+214	portsweep.38	
+214	portsweep.39	
+214	portsweep.40	
+214	portsweep.41	
+214	portsweep.42	
+214	portsweep.43	
+214	portsweep.44	
+214	portsweep.46	
+214	portsweep.47	
+214	portsweep.48	
+214	portsweep.49	
+214	portsweep.50	
+214	portsweep.51	
+214	portsweep.52	
+214	portsweep.53	
+214	portsweep.54	
+214	portsweep.55	
+214	portsweep.58	
+214	portsweep.60	
+214	portsweep.61	
+214	portsweep.62	
+214	portsweep.85	
+214	portsweep.86	
+214	portsweep.87	
+218	saint.30	
+230	portsweep.27	
+230	portsweep.28	
+282	saint.21	
+307	portsweep.56	
+307	portsweep.57	
+307	portsweep.65	
+307	portsweep.66	
+307	portsweep.67	
+307	portsweep.68	
+307	portsweep.69	
+307	portsweep.70	
+307	portsweep.71	
+307	portsweep.73	
+307	portsweep.74	
+307	portsweep.75	
+307	portsweep.76	
+307	portsweep.77	
+307	portsweep.78	
+307	portsweep.79	
+307	portsweep.80	
+307	portsweep.81	
+307	portsweep.82	
+307	portsweep.83	
+307	portsweep.90	
+307	portsweep.91	
+307	portsweep.92	
+307	portsweep.95	
+307	portsweep.97	
+307	portsweep.99	
+307	portsweep.100	
+307	portsweep.101	
+307	portsweep.102	
+307	portsweep.103	
+307	portsweep.105	
+365	snmpgetattack.128	
+365	snmpgetattack.218	
+365	snmpgetattack.689	
+503	smurf.15	
+503	smurf.17	
+503	smurf.19	
+541	saint.22	
+541	saint.23	
+570	saint.383	
+570	saint.384	
+570	saint.385	
+570	saint.387	
+570	saint.388	
+570	saint.391	
+570	saint.392	
+570	saint.394	
+570	saint.395	
+570	saint.396	
+570	saint.397	
+570	saint.399	
+582	portsweep.63	
+582	portsweep.64	
+582	portsweep.72	
+613	saint.538	
+664	apache2.61	
+664	apache2.62	
+664	apache2.64	
+664	apache2.65	
+664	apache2.67	
+664	apache2.68	
+664	apache2.69	
+664	apache2.70	
+664	apache2.71	
+664	apache2.72	
+664	apache2.73	
+664	apache2.74	
+664	apache2.75	
+664	apache2.76	
+664	apache2.77	
+664	apache2.78	
+664	apache2.79	
+664	apache2.80	
+664	apache2.81	
+664	apache2.82	
+664	apache2.83	
+664	apache2.84	
+664	apache2.85	
+664	apache2.86	
+664	apache2.87	
+664	apache2.88	
+664	apache2.89	
+664	apache2.90	
+664	apache2.91	
+979	smurf.20	
+979	smurf.23	
+979	smurf.25	
+1019	smurf.97	
+1122	xlock.3	
+1348	apache2.0	
+1348	apache2.1	
+1348	apache2.2	
+1348	apache2.3	
+1348	apache2.4	
+1348	apache2.5	
+1348	apache2.6	
+1348	apache2.7	
+1348	apache2.8	
+1348	apache2.9	
+1348	apache2.10	
+1348	apache2.11	
+1348	apache2.12	
+1348	apache2.13	
+1348	apache2.14	
+1348	apache2.15	
+1348	apache2.16	
+1348	apache2.17	
+1348	apache2.18	
+1348	apache2.19	
+1348	apache2.20	
+1348	apache2.21	
+1348	apache2.22	
+1348	apache2.23	
+1348	apache2.24	
+1348	apache2.25	
+1348	apache2.26	
+1348	apache2.27	
+1348	apache2.28	
+1348	apache2.29	
+1348	apache2.30	
+1348	apache2.31	
+1348	apache2.32	
+1348	apache2.33	
+1348	apache2.34	
+1348	apache2.35	
+1348	apache2.36	
+1348	apache2.37	
+1348	apache2.38	
+1348	apache2.39	
+1348	apache2.40	
+1348	apache2.41	
+1348	apache2.42	
+1348	apache2.43	
+1348	apache2.44	
+1348	apache2.45	
+1348	apache2.46	
+1348	apache2.47	
+1348	apache2.48	
+1560	apache2.49	
+1560	apache2.50	
+1560	apache2.51	
+1560	apache2.52	
+1560	apache2.53	
+1560	apache2.54	
+1560	apache2.55	
+1560	apache2.56	
+1560	apache2.57	
+1560	apache2.58	
+1560	apache2.59	
+1560	apache2.60	
+1560	apache2.63	
+1560	apache2.66	
+1956	xlock.0	
+1956	xlock.5	
+1956	multihop.0	
+1956	multihop.3	
+1956	sendmail.0	
+1956	sendmail.3	
+1978	smurf.76	
+1978	smurf.144	
+1978	smurf.199	
+1978	smurf.247	
+1978	smurf.288	
+1978	smurf.392	
+1978	smurf.463	
+1978	smurf.748	
+1978	smurf.769	
+1978	smurf.796	
+1978	smurf.837	
+1978	smurf.940	
+
+
+
+Normal values
+0:15
+1:15
+2:0
+3:5
+4:3
+5:5
+6:18
+7:6
+8:2
+9:5
+10:31
+11:1
+12:2
+13:9
+14:5
+15:0
+16:2
+17:1
+18:1
+19:1
+20:0
+21:4
+22:0
+23:9
+24:0
+25:1
+26:0
+27:0
+28:4
+29:2
+30:0
+31:13
+32:1
+33:6
+34:0
+35:0
+36:2
+37:4
+38:0
+39:2
+40:0
+41:0
+42:0
+43:2
+44:2
+45:3
+46:0
+47:0
+48:0
+49:2
+50:1
+51:0
+52:0
+53:0
+54:0
+55:16
+56:0
+57:0
+58:0
+59:0
+60:0
+61:3
+62:0
+63:2
+64:0
+65:0
+66:0
+67:0
+68:0
+69:0
+70:0
+71:0
+72:0
+73:0
+74:0
+75:0
+76:0
+77:0
+78:0
+79:0
+80:0
+81:0
+82:5
+83:0
+84:1
+85:0
+86:0
+87:0
+88:0
+89:5
+90:0
+91:0
+92:0
+93:0
+94:0
+95:0
+96:0
+97:0
+98:0
+99:0
+100:0
+101:0
+102:0
+103:18
+104:0
+105:0
+106:0
+107:1
+108:0
+109:6
+110:0
+111:0
+112:0
+113:0
+114:0
+115:0
+116:0
+117:1
+118:2
+119:14
+
+2013-11-26 08:06:33,567 INFO  [main] analyz.Analyzer   (Analyzer.java:56)     - For anomalies:
+phf. : 0/1
+xsnoop. : 1/2
+apache2. : 245/398
+multihop. : 3/4
+smurf. : 36/1001
+named. : 8/10
+snmpgetattack. : 11/1001
+udpstorm. : 0/1
+buffer_overflo : 1/3
+saint. : 97/623
+sendmail. : 2/6
+ipsweep. : 0/80
+pod. : 20/22
+xlock. : 4/6
+portsweep. : 106/106
+guess_passwd. : 0/2
+
+In all........534/3266  =16%
+2013-11-26 08:06:33,567 INFO  [main] test.DataProcess1 (DataProcess1.java:74)     - ==========================Level1 outlyer finish=================
+2013-11-26 08:08:09,317 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 08:08:09,739 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 08:08:09,754 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 08:08:09,770 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 08:08:09,785 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 08:08:09,817 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 08:08:10,301 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as210
+2013-11-26 08:08:10,301 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=819
+2013-11-26 08:08:12,207 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+0	saint.7	
+0	multihop.1	
+0	saint.2	
+0	smurf.5	
+0	xsnoop.0	
+0	saint.29	
+0	named.2	
+0	named.3	
+0	ipsweep.1	
+0	ipsweep.2	
+0	ipsweep.3	
+0	ipsweep.5	
+0	ipsweep.6	
+0	ipsweep.7	
+0	ipsweep.8	
+0	ipsweep.9	
+0	ipsweep.10	
+0	ipsweep.11	
+0	ipsweep.12	
+0	ipsweep.13	
+0	ipsweep.14	
+0	ipsweep.15	
+0	ipsweep.16	
+0	ipsweep.17	
+0	ipsweep.18	
+0	ipsweep.19	
+0	ipsweep.20	
+0	ipsweep.21	
+0	ipsweep.22	
+0	ipsweep.23	
+0	ipsweep.24	
+0	ipsweep.25	
+0	ipsweep.26	
+0	ipsweep.27	
+0	ipsweep.28	
+0	ipsweep.29	
+0	ipsweep.30	
+0	portsweep.2	
+0	portsweep.5	
+0	portsweep.21	
+0	saint.0	
+0	saint.1	
+1	named.6	
+1	saint.4	
+1	saint.5	
+1	saint.6	
+2	saint.30	
+2	portsweep.29	
+2	portsweep.30	
+4	saint.3	
+4	saint.8	
+5	portsweep.27	
+5	portsweep.28	
+5	portsweep.0	
+5	named.8	
+5	saint.24	
+5	saint.25	
+5	saint.26	
+5	saint.27	
+5	saint.28	
+6	named.5	
+6	saint.10	
+6	saint.11	
+7	portsweep.6	
+7	portsweep.7	
+7	portsweep.8	
+7	portsweep.9	
+7	portsweep.10	
+7	smurf.2	
+7	smurf.4	
+7	saint.9	
+7	portsweep.1	
+7	portsweep.3	
+7	portsweep.4	
+7	smurf.0	
+7	smurf.1	
+7	smurf.3	
+7	smurf.6	
+7	smurf.10	
+7	named.4	
+8	named.7	
+8	named.9	
+8	saint.14	
+8	saint.15	
+8	portsweep.11	
+8	portsweep.12	
+8	portsweep.13	
+8	portsweep.14	
+8	saint.18	
+8	saint.19	
+8	saint.20	
+8	portsweep.19	
+8	portsweep.20	
+8	portsweep.22	
+8	portsweep.23	
+9	smurf.21	
+9	smurf.22	
+9	smurf.24	
+9	smurf.26	
+9	smurf.27	
+9	smurf.28	
+9	smurf.29	
+9	smurf.30	
+9	buffer_overflo0	
+9	portsweep.26	
+10	saint.22	
+10	saint.23	
+12	smurf.12	
+12	smurf.14	
+12	smurf.16	
+12	smurf.18	
+12	saint.12	
+12	saint.13	
+12	portsweep.24	
+12	portsweep.25	
+13	saint.16	
+13	saint.17	
+13	saint.21	
+16	xlock.4	
+16	pod.0	
+17	smurf.8	
+18	portsweep.16	
+18	portsweep.17	
+18	portsweep.18	
+18	smurf.7	
+18	smurf.9	
+18	smurf.11	
+18	smurf.13	
+19	smurf.20	
+19	smurf.23	
+19	smurf.25	
+22	smurf.15	
+22	smurf.17	
+22	smurf.19	
+22	portsweep.15	
+1104	xlock.3	
+1426	xlock.0	
+1426	xlock.5	
+1426	multihop.0	
+1426	multihop.3	
+1426	sendmail.0	
+1426	sendmail.3	
+2465	named.0	
+2465	xlock.1	
+2465	xlock.2	
+2465	xsnoop.1	
+2465	sendmail.2	
+2465	guess_passwd.0	
+2465	guess_passwd.1	
+2465	sendmail.5	
+
+
+
+Normal values
+0:18
+1:15
+2:0
+3:5
+4:5
+5:11
+6:12
+7:10
+8:9
+9:23
+10:6
+11:3
+12:3
+13:14
+14:2
+15:2
+16:8
+17:2
+18:0
+19:0
+20:0
+21:0
+22:1
+23:0
+24:1
+25:0
+26:0
+27:0
+28:0
+29:0
+30:4
+31:1
+32:6
+33:0
+34:0
+35:2
+36:4
+37:0
+38:0
+39:0
+40:0
+41:0
+42:0
+43:2
+44:5
+45:0
+46:0
+47:0
+48:2
+49:0
+50:1
+51:0
+52:0
+53:0
+54:16
+55:0
+56:0
+57:0
+58:0
+59:0
+60:3
+61:0
+62:0
+63:2
+64:0
+65:0
+66:0
+67:0
+68:0
+69:0
+70:0
+71:0
+72:0
+73:0
+74:0
+75:0
+76:0
+77:0
+78:0
+79:0
+80:5
+81:0
+82:0
+83:1
+84:0
+85:0
+86:0
+87:0
+88:0
+89:4
+90:0
+91:0
+92:0
+93:0
+94:0
+95:0
+96:0
+97:0
+98:0
+99:0
+100:0
+101:18
+102:0
+103:0
+104:0
+105:0
+106:0
+107:1
+108:0
+109:6
+110:0
+111:0
+112:0
+113:0
+114:0
+115:0
+116:1
+117:2
+118:14
+119:0
+
+2013-11-26 08:08:12,207 INFO  [main] analyz.Analyzer   (Analyzer.java:56)     - For anomalies:
+phf. : 0/1
+xsnoop. : 2/2
+apache2. : 0/31
+multihop. : 3/4
+smurf. : 31/31
+named. : 9/10
+snmpgetattack. : 0/31
+udpstorm. : 0/1
+buffer_overflo : 1/3
+saint. : 31/31
+sendmail. : 4/6
+ipsweep. : 29/31
+pod. : 1/22
+xlock. : 6/6
+portsweep. : 31/31
+guess_passwd. : 2/2
+
+In all........150/243  =61%
+2013-11-26 08:08:12,207 INFO  [main] test.DataProcess1 (DataProcess1.java:74)     - ==========================Level1 outlyer finish=================
+2013-11-26 08:08:36,707 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 08:08:37,145 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 08:08:37,160 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 08:08:37,176 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 08:08:37,192 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 08:08:37,207 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 08:08:37,707 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as209
+2013-11-26 08:08:37,707 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=802
+2013-11-26 08:08:59,395 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+0	pod.7	
+0	pod.11	
+0	multihop.1	
+0	pod.2	
+0	ipsweep.1	
+0	ipsweep.2	
+0	ipsweep.3	
+0	ipsweep.5	
+0	ipsweep.6	
+0	ipsweep.7	
+0	ipsweep.8	
+0	ipsweep.9	
+0	ipsweep.10	
+0	ipsweep.11	
+0	ipsweep.12	
+0	ipsweep.13	
+0	ipsweep.14	
+0	ipsweep.15	
+0	ipsweep.16	
+0	ipsweep.17	
+0	ipsweep.18	
+0	ipsweep.19	
+0	ipsweep.20	
+0	saint.2	
+0	xsnoop.0	
+0	smurf.5	
+0	portsweep.2	
+0	portsweep.5	
+1	pod.3	
+2	saint.7	
+2	named.6	
+3	saint.0	
+3	saint.1	
+5	saint.8	
+5	pod.4	
+5	saint.18	
+5	saint.19	
+5	saint.20	
+5	portsweep.19	
+5	portsweep.20	
+5	saint.4	
+5	saint.5	
+5	saint.6	
+6	named.8	
+7	pod.5	
+7	pod.6	
+7	pod.8	
+7	portsweep.0	
+8	pod.12	
+8	pod.13	
+8	pod.14	
+8	pod.15	
+8	pod.16	
+8	pod.20	
+8	saint.3	
+8	saint.9	
+8	portsweep.6	
+8	portsweep.7	
+8	portsweep.8	
+8	portsweep.9	
+8	portsweep.10	
+9	saint.10	
+9	saint.11	
+9	named.7	
+9	named.9	
+9	smurf.2	
+9	smurf.4	
+9	portsweep.1	
+9	portsweep.3	
+9	portsweep.4	
+10	smurf.0	
+10	smurf.1	
+10	smurf.3	
+10	smurf.6	
+10	smurf.10	
+10	saint.14	
+10	saint.15	
+10	portsweep.11	
+10	portsweep.12	
+10	portsweep.13	
+10	portsweep.14	
+11	pod.17	
+11	pod.18	
+11	pod.19	
+12	pod.9	
+12	pod.10	
+12	portsweep.16	
+12	portsweep.17	
+12	portsweep.18	
+13	saint.16	
+13	saint.17	
+14	saint.12	
+14	saint.13	
+14	portsweep.15	
+15	named.5	
+16	smurf.20	
+16	xlock.4	
+16	pod.0	
+26	smurf.12	
+26	smurf.14	
+26	smurf.16	
+26	smurf.18	
+28	smurf.7	
+28	smurf.9	
+28	smurf.11	
+28	smurf.13	
+28	smurf.8	
+63	named.4	
+64	named.2	
+64	named.3	
+68	smurf.15	
+68	smurf.17	
+68	smurf.19	
+683	buffer_overflo0	
+1096	xlock.3	
+1517	xlock.0	
+1517	xlock.5	
+1517	multihop.0	
+1517	multihop.3	
+1517	sendmail.0	
+1517	sendmail.3	
+2623	named.0	
+2623	xlock.1	
+2623	xlock.2	
+2623	xsnoop.1	
+2623	sendmail.2	
+2623	guess_passwd.0	
+2623	guess_passwd.1	
+2623	sendmail.5	
+
+
+
+Normal values
+0:11
+1:4
+2:7
+3:5
+4:8
+5:2
+6:6
+7:6
+8:6
+9:1
+10:13
+11:6
+12:7
+13:4
+14:6
+15:11
+16:17
+17:4
+18:0
+19:2
+20:1
+21:0
+22:1
+23:1
+24:3
+25:0
+26:0
+27:2
+28:2
+29:2
+30:0
+31:0
+32:0
+33:0
+34:0
+35:0
+36:0
+37:0
+38:0
+39:0
+40:0
+41:0
+42:0
+43:0
+44:0
+45:0
+46:0
+47:0
+48:0
+49:0
+50:0
+51:0
+52:0
+53:0
+54:0
+55:4
+56:2
+57:0
+58:0
+59:0
+60:0
+61:5
+62:0
+63:2
+64:1
+65:0
+66:0
+67:0
+68:0
+69:0
+70:0
+71:0
+72:0
+73:0
+74:0
+75:0
+76:0
+77:0
+78:0
+79:0
+80:3
+81:0
+82:2
+83:16
+84:0
+85:0
+86:0
+87:0
+88:0
+89:0
+90:0
+91:0
+92:0
+93:0
+94:0
+95:0
+96:0
+97:4
+98:0
+99:0
+100:0
+101:0
+102:4
+103:0
+104:0
+105:0
+106:0
+107:0
+108:0
+109:0
+110:0
+111:0
+112:0
+113:0
+114:0
+115:1
+116:0
+117:0
+118:0
+119:0
+
+2013-11-26 08:08:59,410 INFO  [main] analyz.Analyzer   (Analyzer.java:56)     - For anomalies:
+phf. : 0/1
+xsnoop. : 2/2
+apache2. : 0/21
+multihop. : 3/4
+smurf. : 21/21
+named. : 9/10
+snmpgetattack. : 0/21
+udpstorm. : 0/1
+buffer_overflo : 1/3
+saint. : 21/21
+sendmail. : 4/6
+ipsweep. : 19/21
+pod. : 20/21
+xlock. : 6/6
+portsweep. : 21/21
+guess_passwd. : 2/2
+
+In all........129/182  =70%
+2013-11-26 08:08:59,410 INFO  [main] test.DataProcess1 (DataProcess1.java:74)     - ==========================Level1 outlyer finish=================
+2013-11-26 11:26:36,395 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 11:26:36,832 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 11:26:36,848 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 11:26:36,864 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 11:26:36,879 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 11:26:36,910 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 11:26:37,426 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 6000 data
+2013-11-26 11:26:37,442 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 7000 data
+2013-11-26 11:26:37,457 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 8000 data
+2013-11-26 11:26:37,473 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 9000 data
+2013-11-26 11:26:37,504 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 10000 data
+2013-11-26 11:26:37,629 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 11000 data
+2013-11-26 11:26:37,660 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 12000 data
+2013-11-26 11:26:37,676 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 13000 data
+2013-11-26 11:26:37,707 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 14000 data
+2013-11-26 11:26:37,723 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 15000 data
+2013-11-26 11:26:37,739 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 16000 data
+2013-11-26 11:26:37,770 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 17000 data
+2013-11-26 11:26:37,785 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 18000 data
+2013-11-26 11:26:37,801 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 19000 data
+2013-11-26 11:26:37,832 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 20000 data
+2013-11-26 11:26:38,160 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 21000 data
+2013-11-26 11:26:38,176 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 22000 data
+2013-11-26 11:26:38,301 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 23000 data
+2013-11-26 11:26:38,332 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 24000 data
+2013-11-26 11:26:38,348 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 25000 data
+2013-11-26 11:26:38,379 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 26000 data
+2013-11-26 11:26:38,410 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 27000 data
+2013-11-26 11:26:38,457 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 28000 data
+2013-11-26 11:26:38,489 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 29000 data
+2013-11-26 11:26:38,504 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 30000 data
+2013-11-26 11:26:38,520 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 31000 data
+2013-11-26 11:26:38,551 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 32000 data
+2013-11-26 11:26:38,567 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 33000 data
+2013-11-26 11:26:38,582 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 34000 data
+2013-11-26 11:26:38,598 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 35000 data
+2013-11-26 11:26:38,629 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 36000 data
+2013-11-26 11:26:38,645 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 37000 data
+2013-11-26 11:26:38,660 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 38000 data
+2013-11-26 11:26:38,676 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 39000 data
+2013-11-26 11:26:38,692 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 40000 data
+2013-11-26 11:26:39,504 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 41000 data
+2013-11-26 11:26:39,520 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 42000 data
+2013-11-26 11:26:39,535 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 43000 data
+2013-11-26 11:26:39,551 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 44000 data
+2013-11-26 11:26:39,567 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 45000 data
+2013-11-26 11:26:39,754 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 46000 data
+2013-11-26 11:26:39,770 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 47000 data
+2013-11-26 11:26:39,801 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 48000 data
+2013-11-26 11:26:39,817 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 49000 data
+2013-11-26 11:26:39,832 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 50000 data
+2013-11-26 11:26:39,864 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 51000 data
+2013-11-26 11:26:40,629 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 52000 data
+2013-11-26 11:26:40,645 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 53000 data
+2013-11-26 11:26:40,676 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 54000 data
+2013-11-26 11:26:40,692 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 55000 data
+2013-11-26 11:26:40,707 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 56000 data
+2013-11-26 11:26:40,739 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 57000 data
+2013-11-26 11:26:40,770 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 58000 data
+2013-11-26 11:26:40,785 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 59000 data
+2013-11-26 11:26:41,067 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 60000 data
+2013-11-26 11:26:41,067 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as697
+2013-11-26 11:26:41,067 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=2606
+2013-11-26 11:26:47,364 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+0	land.0	
+0	pod.7	
+0	mscan.1	
+0	multihop.1	
+0	saint.2	
+0	land.4	
+0	land.5	
+0	land.6	
+0	land.7	
+0	mscan.4	
+0	mscan.20	
+0	xterm.9	
+0	mscan.16	
+0	smurf.5	
+0	mscan.17	
+0	land.3	
+0	mscan.6	
+0	mscan.0	
+0	mscan.11	
+0	mscan.5	
+0	mscan.8	
+0	pod.11	
+0	mscan.12	
+0	mscan.13	
+0	guess_passwd.5	
+0	pod.2	
+1	satan.9	
+1	satan.10	
+1	saint.7	
+2	satan.2	
+2	satan.3	
+2	satan.16	
+2	mscan.7	
+2	satan.1	
+2	ipsweep.1	
+2	ipsweep.2	
+2	ipsweep.3	
+2	ipsweep.5	
+2	ipsweep.6	
+2	ipsweep.7	
+2	ipsweep.8	
+2	ipsweep.9	
+2	ipsweep.10	
+2	ipsweep.11	
+2	ipsweep.12	
+2	ipsweep.13	
+2	ipsweep.14	
+2	ipsweep.15	
+2	ipsweep.16	
+2	ipsweep.17	
+2	ipsweep.18	
+2	ipsweep.19	
+2	ipsweep.20	
+2	xterm.10	
+2	mscan.15	
+2	mscan.3	
+2	mscan.9	
+3	satan.15	
+3	loadmodule.0	
+3	mscan.19	
+3	named.11	
+3	mscan.2	
+3	xterm.5	
+3	saint.4	
+3	saint.5	
+3	saint.6	
+3	satan.0	
+3	named.2	
+3	named.3	
+4	pod.3	
+4	land.1	
+4	land.2	
+4	saint.8	
+4	processtable.0	
+5	named.16	
+5	neptune.4	
+5	neptune.5	
+5	neptune.6	
+5	neptune.7	
+5	neptune.8	
+5	neptune.9	
+5	named.15	
+5	xsnoop.0	
+5	neptune.0	
+5	neptune.1	
+5	neptune.2	
+6	imap.0	
+6	httptunnel.0	
+6	httptunnel.1	
+6	httptunnel.3	
+6	httptunnel.4	
+6	httptunnel.5	
+6	httptunnel.6	
+6	httptunnel.7	
+6	httptunnel.8	
+6	httptunnel.9	
+6	httptunnel.12	
+6	httptunnel.13	
+6	httptunnel.14	
+6	httptunnel.16	
+6	httptunnel.18	
+6	httptunnel.19	
+6	satan.20	
+6	saint.10	
+6	saint.11	
+6	portsweep.0	
+7	mscan.18	
+7	smurf.2	
+7	smurf.4	
+7	mscan.10	
+7	guess_passwd.10	
+7	nmap.0	
+7	nmap.1	
+7	nmap.2	
+7	nmap.3	
+7	nmap.4	
+7	nmap.5	
+7	nmap.6	
+7	nmap.7	
+7	nmap.8	
+7	nmap.9	
+7	nmap.10	
+7	nmap.11	
+7	nmap.12	
+7	saint.9	
+7	pod.5	
+7	pod.6	
+7	pod.8	
+7	portsweep.1	
+7	portsweep.3	
+7	portsweep.4	
+7	smurf.0	
+7	smurf.1	
+7	smurf.3	
+7	smurf.6	
+7	smurf.10	
+8	land.8	
+8	satan.6	
+8	satan.7	
+8	satan.8	
+8	pod.4	
+9	portsweep.6	
+9	portsweep.7	
+9	portsweep.8	
+9	portsweep.9	
+9	portsweep.10	
+9	portsweep.2	
+9	portsweep.5	
+11	satan.4	
+11	satan.5	
+11	smurf.12	
+11	smurf.14	
+11	smurf.16	
+11	smurf.18	
+11	satan.11	
+11	satan.12	
+12	pod.12	
+12	pod.13	
+12	pod.14	
+12	pod.15	
+12	pod.16	
+12	pod.20	
+12	neptune.17	
+12	neptune.18	
+13	saint.14	
+13	saint.15	
+13	portsweep.11	
+13	portsweep.12	
+13	portsweep.13	
+13	portsweep.14	
+13	saint.18	
+13	saint.19	
+13	saint.20	
+13	portsweep.19	
+13	portsweep.20	
+13	satan.18	
+13	satan.19	
+13	guess_passwd.4	
+14	named.12	
+14	saint.12	
+14	saint.13	
+14	satan.13	
+14	satan.14	
+14	satan.17	
+16	pod.9	
+16	pod.10	
+16	buffer_overflo4	
+16	smurf.8	
+17	neptune.16	
+18	smurf.7	
+18	smurf.9	
+18	smurf.11	
+18	smurf.13	
+18	neptune.3	
+18	neptune.19	
+18	neptune.20	
+19	ps.8	
+19	ps.13	
+19	buffer_overflo16	
+21	saint.16	
+21	saint.17	
+21	neptune.15	
+22	pod.17	
+22	pod.18	
+22	pod.19	
+22	saint.3	
+22	portsweep.15	
+22	named.6	
+23	rootkit.4	
+23	ps.12	
+24	guess_passwd.9	
+24	portsweep.16	
+24	portsweep.17	
+24	portsweep.18	
+24	neptune.12	
+25	perl.1	
+25	neptune.11	
+26	multihop.5	
+26	xterm.11	
+26	ps.9	
+26	nmap.20	
+27	nmap.13	
+27	nmap.14	
+27	nmap.15	
+27	nmap.16	
+27	nmap.17	
+27	nmap.18	
+27	nmap.19	
+27	processtable.17	
+29	multihop.13	
+30	buffer_overflo5	
+30	processtable.13	
+30	named.8	
+31	warezmaster.5	
+31	xterm.6	
+33	named.7	
+33	named.9	
+33	udpstorm.0	
+33	xterm.0	
+34	guess_passwd.6	
+35	buffer_overflo6	
+35	warezmaster.6	
+35	neptune.13	
+35	neptune.14	
+35	buffer_overflo0	
+38	xterm.12	
+38	named.14	
+39	buffer_overflo13	
+45	buffer_overflo7	
+48	saint.0	
+48	saint.1	
+51	httptunnel.2	
+51	httptunnel.15	
+51	httptunnel.17	
+54	warezmaster.7	
+55	neptune.10	
+56	xterm.7	
+59	named.5	
+59	named.10	
+71	xlock.4	
+71	buffer_overflo12	
+71	buffer_overflo14	
+128	pod.0	
+140	named.4	
+144	warezmaster.2	
+150	warezmaster.12	
+150	warezmaster.13	
+150	xterm.2	
+150	xterm.8	
+197	mscan.14	
+218	rootkit.2	
+218	rootkit.3	
+433	smurf.15	
+433	smurf.17	
+433	smurf.19	
+660	smurf.20	
+684	buffer_overflo8	
+869	warezmaster.3	
+1108	ps.6	
+1414	warezmaster.4	
+5710	buffer_overflo15	
+7441	phf.0	
+7887	udpstorm.1	
+8055	ftp_write.0	
+8055	ps.11	
+10319	processtable.16	
+10319	rootkit.0	
+10410	guess_passwd.11	
+10590	processtable.11	
+10590	processtable.12	
+10990	apache2.0	
+10990	apache2.1	
+10990	apache2.2	
+10990	apache2.3	
+10990	apache2.4	
+10990	apache2.5	
+10990	apache2.6	
+10990	apache2.7	
+10990	apache2.8	
+10990	apache2.9	
+10990	apache2.10	
+10990	apache2.11	
+10990	apache2.12	
+10990	apache2.13	
+10990	apache2.14	
+10990	apache2.15	
+10990	apache2.16	
+10990	apache2.17	
+10990	apache2.18	
+10990	apache2.19	
+10990	apache2.20	
+11100	perl.0	
+11100	sendmail.8	
+11100	httptunnel.10	
+11100	httptunnel.11	
+11100	httptunnel.20	
+11100	teardrop.0	
+11100	teardrop.1	
+11100	multihop.14	
+11553	ftp_write.2	
+11893	xlock.3	
+16188	loadmodule.1	
+16188	mailbomb.0	
+16188	mailbomb.1	
+16188	mailbomb.2	
+16188	mailbomb.3	
+16188	mailbomb.4	
+16188	mailbomb.5	
+16188	mailbomb.6	
+16188	mailbomb.7	
+16188	mailbomb.8	
+16188	mailbomb.9	
+16188	mailbomb.10	
+16188	mailbomb.11	
+16188	mailbomb.12	
+16188	mailbomb.13	
+16188	mailbomb.14	
+16188	mailbomb.15	
+16188	mailbomb.16	
+16188	mailbomb.17	
+16188	mailbomb.18	
+16188	mailbomb.19	
+16188	mailbomb.20	
+22138	processtable.14	
+27533	back.1	
+27533	back.2	
+
+
+
+Normal values
+0:24
+1:20
+2:20
+3:15
+4:13
+5:17
+6:10
+7:15
+8:8
+9:23
+10:15
+11:24
+12:21
+13:12
+14:38
+15:5
+16:41
+17:18
+18:12
+19:12
+20:6
+21:31
+22:10
+23:14
+24:10
+25:26
+26:50
+27:18
+28:6
+29:5
+30:14
+31:10
+32:5
+33:21
+34:5
+35:34
+36:0
+37:13
+38:10
+39:19
+40:5
+41:9
+42:8
+43:22
+44:28
+45:28
+46:8
+47:8
+48:3
+49:3
+50:0
+51:12
+52:3
+53:16
+54:16
+55:12
+56:12
+57:0
+58:3
+59:5
+60:0
+61:1
+62:5
+63:2
+64:2
+65:14
+66:16
+67:5
+68:4
+69:0
+70:1
+71:8
+72:3
+73:10
+74:7
+75:0
+76:4
+77:1
+78:6
+79:0
+80:0
+81:9
+82:0
+83:0
+84:0
+85:5
+86:0
+87:0
+88:1
+89:3
+90:0
+91:0
+92:1
+93:0
+94:1
+95:10
+96:0
+97:0
+98:0
+99:0
+100:0
+101:1
+102:0
+103:0
+104:0
+105:0
+106:13
+107:0
+108:58
+109:3
+110:0
+111:0
+112:0
+113:0
+114:0
+115:0
+116:0
+117:0
+118:0
+119:0
+
+2013-11-26 11:26:47,364 INFO  [main] analyz.Analyzer   (Analyzer.java:56)     - For anomalies:
+back. : 2/21
+teardrop. : 2/12
+neptune. : 21/21
+phf. : 1/2
+xsnoop. : 1/4
+satan. : 21/21
+apache2. : 21/21
+land. : 9/9
+mailbomb. : 21/21
+multihop. : 4/18
+smurf. : 21/21
+named. : 14/17
+perl. : 2/2
+worm. : 0/2
+httptunnel. : 21/21
+snmpgetattack. : 0/21
+ps. : 6/16
+udpstorm. : 2/2
+snmpguess. : 0/21
+loadmodule. : 2/2
+sqlattack. : 0/2
+buffer_overflo : 11/21
+processtable. : 7/21
+rootkit. : 4/13
+saint. : 21/21
+mscan. : 21/21
+xterm. : 10/13
+ftp_write. : 2/3
+sendmail. : 1/17
+ipsweep. : 19/21
+pod. : 20/21
+xlock. : 2/9
+imap. : 1/1
+nmap. : 21/21
+warezmaster. : 8/21
+portsweep. : 21/21
+guess_passwd. : 6/21
+
+In all........346/543  =63%
+2013-11-26 11:26:47,364 INFO  [main] test.DataProcess1 (DataProcess1.java:74)     - ==========================Level1 outlyer finish=================
+2013-11-26 11:29:02,223 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 0000 data
+2013-11-26 11:29:02,660 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 1000 data
+2013-11-26 11:29:02,692 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 2000 data
+2013-11-26 11:29:02,707 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 3000 data
+2013-11-26 11:29:02,723 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 4000 data
+2013-11-26 11:29:02,739 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 5000 data
+2013-11-26 11:29:03,285 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 6000 data
+2013-11-26 11:29:03,301 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 7000 data
+2013-11-26 11:29:03,332 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 8000 data
+2013-11-26 11:29:03,348 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 9000 data
+2013-11-26 11:29:03,379 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 10000 data
+2013-11-26 11:29:03,520 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 11000 data
+2013-11-26 11:29:03,551 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 12000 data
+2013-11-26 11:29:03,567 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 13000 data
+2013-11-26 11:29:03,598 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 14000 data
+2013-11-26 11:29:03,614 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 15000 data
+2013-11-26 11:29:03,645 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 16000 data
+2013-11-26 11:29:03,676 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 17000 data
+2013-11-26 11:29:03,707 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 18000 data
+2013-11-26 11:29:03,723 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 19000 data
+2013-11-26 11:29:03,754 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 20000 data
+2013-11-26 11:29:04,114 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 21000 data
+2013-11-26 11:29:04,129 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 22000 data
+2013-11-26 11:29:04,239 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 23000 data
+2013-11-26 11:29:04,285 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 24000 data
+2013-11-26 11:29:04,301 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 25000 data
+2013-11-26 11:29:04,317 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 26000 data
+2013-11-26 11:29:04,364 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 27000 data
+2013-11-26 11:29:04,410 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 28000 data
+2013-11-26 11:29:04,426 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 29000 data
+2013-11-26 11:29:04,442 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 30000 data
+2013-11-26 11:29:04,457 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 31000 data
+2013-11-26 11:29:04,489 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 32000 data
+2013-11-26 11:29:04,504 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 33000 data
+2013-11-26 11:29:04,535 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 34000 data
+2013-11-26 11:29:04,551 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 35000 data
+2013-11-26 11:29:04,567 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 36000 data
+2013-11-26 11:29:04,582 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 37000 data
+2013-11-26 11:29:04,598 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 38000 data
+2013-11-26 11:29:04,614 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 39000 data
+2013-11-26 11:29:04,629 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 40000 data
+2013-11-26 11:29:05,426 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 41000 data
+2013-11-26 11:29:05,442 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 42000 data
+2013-11-26 11:29:05,457 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 43000 data
+2013-11-26 11:29:05,473 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 44000 data
+2013-11-26 11:29:05,489 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 45000 data
+2013-11-26 11:29:05,660 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 46000 data
+2013-11-26 11:29:05,676 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 47000 data
+2013-11-26 11:29:05,707 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 48000 data
+2013-11-26 11:29:05,723 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 49000 data
+2013-11-26 11:29:05,739 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 50000 data
+2013-11-26 11:29:05,770 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 51000 data
+2013-11-26 11:29:06,489 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 52000 data
+2013-11-26 11:29:06,520 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 53000 data
+2013-11-26 11:29:06,535 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 54000 data
+2013-11-26 11:29:06,551 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 55000 data
+2013-11-26 11:29:06,567 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 56000 data
+2013-11-26 11:29:06,598 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 57000 data
+2013-11-26 11:29:06,629 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 58000 data
+2013-11-26 11:29:06,645 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 59000 data
+2013-11-26 11:29:06,926 INFO  [main] butil.FileUtility (FileUtility.java:141)     -  finish processing 60000 data
+2013-11-26 11:29:06,926 INFO  [main] test.DataProcess1 (DataProcess1.java:46)     - After inserting the data we get grid number as697
+2013-11-26 11:29:06,926 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=2102
+2013-11-26 11:29:12,098 INFO  [main] analyz.Analyzer   (Analyzer.java:38)     - They are
+0	land.0	
+0	pod.7	
+0	mscan.1	
+0	multihop.1	
+0	saint.2	
+0	land.4	
+0	land.5	
+0	land.6	
+0	land.7	
+0	mscan.4	
+0	mscan.20	
+0	xterm.9	
+0	mscan.16	
+0	smurf.5	
+0	mscan.17	
+0	land.3	
+0	mscan.6	
+0	mscan.0	
+0	mscan.11	
+0	mscan.5	
+0	mscan.8	
+0	pod.11	
+0	mscan.12	
+0	mscan.13	
+0	guess_passwd.5	
+0	pod.2	
+1	satan.9	
+1	satan.10	
+1	saint.7	
+2	satan.2	
+2	satan.3	
+2	satan.16	
+2	mscan.7	
+2	satan.1	
+2	ipsweep.1	
+2	ipsweep.2	
+2	ipsweep.3	
+2	ipsweep.5	
+2	ipsweep.6	
+2	ipsweep.7	
+2	ipsweep.8	
+2	ipsweep.9	
+2	ipsweep.10	
+2	ipsweep.11	
+2	ipsweep.12	
+2	ipsweep.13	
+2	ipsweep.14	
+2	ipsweep.15	
+2	ipsweep.16	
+2	ipsweep.17	
+2	ipsweep.18	
+2	ipsweep.19	
+2	ipsweep.20	
+2	xterm.10	
+2	mscan.15	
+2	mscan.3	
+2	mscan.9	
+3	satan.15	
+3	loadmodule.0	
+3	mscan.19	
+3	named.11	
+3	mscan.2	
+3	xterm.5	
+3	saint.4	
+3	saint.5	
+3	saint.6	
+3	satan.0	
+3	named.2	
+3	named.3	
+4	pod.3	
+4	land.1	
+4	land.2	
+4	saint.8	
+4	processtable.0	
+5	named.16	
+5	neptune.4	
+5	neptune.5	
+5	neptune.6	
+5	neptune.7	
+5	neptune.8	
+5	neptune.9	
+5	named.15	
+5	xsnoop.0	
+5	neptune.0	
+5	neptune.1	
+5	neptune.2	
+6	imap.0	
+6	httptunnel.0	
+6	httptunnel.1	
+6	httptunnel.3	
+6	httptunnel.4	
+6	httptunnel.5	
+6	httptunnel.6	
+6	httptunnel.7	
+6	httptunnel.8	
+6	httptunnel.9	
+6	httptunnel.12	
+6	httptunnel.13	
+6	httptunnel.14	
+6	httptunnel.16	
+6	httptunnel.18	
+6	httptunnel.19	
+6	satan.20	
+6	saint.10	
+6	saint.11	
+6	portsweep.0	
+7	mscan.18	
+7	smurf.2	
+7	smurf.4	
+7	mscan.10	
+7	guess_passwd.10	
+7	nmap.0	
+7	nmap.1	
+7	nmap.2	
+7	nmap.3	
+7	nmap.4	
+7	nmap.5	
+7	nmap.6	
+7	nmap.7	
+7	nmap.8	
+7	nmap.9	
+7	nmap.10	
+7	nmap.11	
+7	nmap.12	
+7	saint.9	
+7	pod.5	
+7	pod.6	
+7	pod.8	
+7	portsweep.1	
+7	portsweep.3	
+7	portsweep.4	
+7	smurf.0	
+7	smurf.1	
+7	smurf.3	
+7	smurf.6	
+7	smurf.10	
+8	land.8	
+8	satan.6	
+8	satan.7	
+8	satan.8	
+8	pod.4	
+9	portsweep.6	
+9	portsweep.7	
+9	portsweep.8	
+9	portsweep.9	
+9	portsweep.10	
+9	portsweep.2	
+9	portsweep.5	
+11	satan.4	
+11	satan.5	
+11	smurf.12	
+11	smurf.14	
+11	smurf.16	
+11	smurf.18	
+11	satan.11	
+11	satan.12	
+12	pod.12	
+12	pod.13	
+12	pod.14	
+12	pod.15	
+12	pod.16	
+12	pod.20	
+12	neptune.17	
+12	neptune.18	
+13	saint.14	
+13	saint.15	
+13	portsweep.11	
+13	portsweep.12	
+13	portsweep.13	
+13	portsweep.14	
+13	saint.18	
+13	saint.19	
+13	saint.20	
+13	portsweep.19	
+13	portsweep.20	
+13	satan.18	
+13	satan.19	
+13	guess_passwd.4	
+14	named.12	
+14	saint.12	
+14	saint.13	
+14	satan.13	
+14	satan.14	
+14	satan.17	
+16	pod.9	
+16	pod.10	
+16	buffer_overflo4	
+16	smurf.8	
+17	neptune.16	
+18	smurf.7	
+18	smurf.9	
+18	smurf.11	
+18	smurf.13	
+18	neptune.3	
+18	neptune.19	
+18	neptune.20	
+19	ps.8	
+19	ps.13	
+19	buffer_overflo16	
+21	saint.16	
+21	saint.17	
+21	neptune.15	
+22	pod.17	
+22	pod.18	
+22	pod.19	
+22	saint.3	
+22	portsweep.15	
+22	named.6	
+23	rootkit.4	
+23	ps.12	
+24	guess_passwd.9	
+24	portsweep.16	
+24	portsweep.17	
+24	portsweep.18	
+24	neptune.12	
+25	perl.1	
+25	neptune.11	
+26	multihop.5	
+26	xterm.11	
+26	ps.9	
+26	nmap.20	
+27	nmap.13	
+27	nmap.14	
+27	nmap.15	
+27	nmap.16	
+27	nmap.17	
+27	nmap.18	
+27	nmap.19	
+27	processtable.17	
+29	multihop.13	
+30	buffer_overflo5	
+30	processtable.13	
+30	named.8	
+31	warezmaster.5	
+31	xterm.6	
+33	named.7	
+33	named.9	
+33	udpstorm.0	
+33	xterm.0	
+34	guess_passwd.6	
+35	buffer_overflo6	
+35	warezmaster.6	
+35	neptune.13	
+35	neptune.14	
+35	buffer_overflo0	
+38	xterm.12	
+38	named.14	
+39	buffer_overflo13	
+45	buffer_overflo7	
+48	saint.0	
+48	saint.1	
+51	httptunnel.2	
+51	httptunnel.15	
+51	httptunnel.17	
+54	warezmaster.7	
+55	neptune.10	
+56	xterm.7	
+59	named.5	
+59	named.10	
+71	xlock.4	
+71	buffer_overflo12	
+71	buffer_overflo14	
+128	pod.0	
+140	named.4	
+144	warezmaster.2	
+150	warezmaster.12	
+150	warezmaster.13	
+150	xterm.2	
+150	xterm.8	
+197	mscan.14	
+218	rootkit.2	
+218	rootkit.3	
+433	smurf.15	
+433	smurf.17	
+433	smurf.19	
+660	smurf.20	
+684	buffer_overflo8	
+1108	ps.6	
+5710	buffer_overflo15	
+7441	phf.0	
+7887	udpstorm.1	
+8055	ftp_write.0	
+8055	ps.11	
+10319	processtable.16	
+10319	rootkit.0	
+10410	guess_passwd.11	
+10590	processtable.11	
+10590	processtable.12	
+10990	apache2.0	
+10990	apache2.1	
+10990	apache2.2	
+10990	apache2.3	
+10990	apache2.4	
+10990	apache2.5	
+10990	apache2.6	
+10990	apache2.7	
+10990	apache2.8	
+10990	apache2.9	
+10990	apache2.10	
+10990	apache2.11	
+10990	apache2.12	
+10990	apache2.13	
+10990	apache2.14	
+10990	apache2.15	
+10990	apache2.16	
+10990	apache2.17	
+10990	apache2.18	
+10990	apache2.19	
+10990	apache2.20	
+11100	perl.0	
+11100	sendmail.8	
+11100	httptunnel.10	
+11100	httptunnel.11	
+11100	httptunnel.20	
+11100	teardrop.0	
+11100	teardrop.1	
+11100	multihop.14	
+11553	ftp_write.2	
+11893	xlock.3	
+16188	loadmodule.1	
+16188	mailbomb.0	
+16188	mailbomb.1	
+16188	mailbomb.2	
+16188	mailbomb.3	
+16188	mailbomb.4	
+16188	mailbomb.5	
+16188	mailbomb.6	
+16188	mailbomb.7	
+16188	mailbomb.8	
+16188	mailbomb.9	
+16188	mailbomb.10	
+16188	mailbomb.11	
+16188	mailbomb.12	
+16188	mailbomb.13	
+16188	mailbomb.14	
+16188	mailbomb.15	
+16188	mailbomb.16	
+16188	mailbomb.17	
+16188	mailbomb.18	
+16188	mailbomb.19	
+16188	mailbomb.20	
+22138	processtable.14	
+
+
+
+Normal values
+0:24
+1:20
+2:20
+3:15
+4:13
+5:17
+6:10
+7:15
+8:8
+9:23
+10:15
+11:24
+12:21
+13:12
+14:38
+15:5
+16:41
+17:18
+18:12
+19:12
+20:6
+21:31
+22:10
+23:14
+24:10
+25:26
+26:50
+27:18
+28:6
+29:5
+30:14
+31:10
+32:5
+33:21
+34:5
+35:34
+36:0
+37:13
+38:10
+39:19
+40:5
+41:9
+42:8
+43:22
+44:28
+45:28
+46:8
+47:8
+48:3
+49:3
+50:0
+51:12
+52:3
+53:16
+54:16
+55:12
+56:12
+57:0
+58:3
+59:5
+60:0
+61:1
+62:5
+63:2
+64:2
+65:14
+66:16
+67:5
+68:4
+69:0
+70:1
+71:8
+72:3
+73:10
+74:7
+75:0
+76:4
+77:1
+78:6
+79:0
+80:0
+81:9
+82:0
+83:0
+84:0
+85:5
+86:0
+87:0
+88:1
+89:3
+90:0
+91:0
+92:1
+93:0
+94:1
+95:10
+96:0
+97:0
+98:0
+99:0
+100:0
+101:1
+102:0
+103:0
+104:0
+105:0
+106:13
+107:0
+108:15
+109:3
+110:0
+111:0
+112:0
+113:0
+114:0
+115:0
+116:0
+117:0
+118:0
+119:0
+
+2013-11-26 11:29:12,098 INFO  [main] analyz.Analyzer   (Analyzer.java:56)     - For anomalies:
+back. : 0/21
+teardrop. : 2/12
+neptune. : 21/21
+phf. : 1/2
+xsnoop. : 1/4
+satan. : 21/21
+apache2. : 21/21
+land. : 9/9
+mailbomb. : 21/21
+multihop. : 4/18
+smurf. : 21/21
+named. : 14/17
+perl. : 2/2
+worm. : 0/2
+httptunnel. : 21/21
+snmpgetattack. : 0/21
+ps. : 6/16
+udpstorm. : 2/2
+snmpguess. : 0/21
+loadmodule. : 2/2
+sqlattack. : 0/2
+buffer_overflo : 11/21
+processtable. : 7/21
+rootkit. : 4/13
+saint. : 21/21
+mscan. : 21/21
+xterm. : 10/13
+ftp_write. : 2/3
+sendmail. : 1/17
+ipsweep. : 19/21
+pod. : 20/21
+xlock. : 2/9
+imap. : 1/1
+nmap. : 21/21
+warezmaster. : 6/21
+portsweep. : 21/21
+guess_passwd. : 6/21
+
+In all........342/543  =62%
+2013-11-26 11:29:12,098 INFO  [main] test.DataProcess1 (DataProcess1.java:74)     - ==========================Level1 outlyer finish=================

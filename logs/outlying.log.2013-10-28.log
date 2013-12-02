@@ -1,0 +1,222 @@
+2013-10-28 08:08:20,062 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs0	44,59,87
+2013-10-28 08:08:20,064 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs1	22,67,71
+2013-10-28 08:08:20,065 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs2	51,3,36
+2013-10-28 08:08:20,065 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs3	80,8,34
+2013-10-28 08:08:20,065 INFO  [main] test.Test         (    Test.java:31)     - now we are going to insert testing point of number: 2004
+2013-10-28 08:08:20,075 INFO  [main] test.Test         (    Test.java:46)     - After inserting the data we get grid number as131
+2013-10-28 08:08:20,077 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=8
+2013-10-28 08:08:20,090 INFO  [main] test.Test         (    Test.java:75)     - ==========================Level1 outlyer finish=================
+2013-10-28 08:08:20,090 INFO  [main] test.Test         (    Test.java:93)     - After inserting the data we get grid number as5
+2013-10-28 08:08:20,090 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=4
+2013-10-28 08:08:20,091 INFO  [main] test.Test         (    Test.java:103)     - They are
+Outs3	0
+Outs2	0
+Outs0	0
+Outs1	0
+
+2013-10-28 08:56:49,483 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs0	37,57,56
+2013-10-28 08:56:49,486 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs1	41,9,92
+2013-10-28 08:56:49,486 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs2	53,54,3
+2013-10-28 08:56:49,486 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs3	51,94,66
+2013-10-28 08:56:49,486 INFO  [main] test.Test         (    Test.java:31)     - now we are going to insert testing point of number: 2004
+2013-10-28 08:56:49,502 INFO  [main] test.Test         (    Test.java:46)     - After inserting the data we get grid number as130
+2013-10-28 08:56:49,503 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=28
+2013-10-28 08:56:49,530 INFO  [main] test.Test         (    Test.java:76)     - ==========================Level1 outlyer finish=================
+2013-10-28 08:56:49,531 INFO  [main] test.Test         (    Test.java:94)     - After inserting the data we get grid number as12
+2013-10-28 08:56:49,531 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=19
+2013-10-28 08:56:49,531 INFO  [main] test.Test         (    Test.java:104)     - They are
+Outs0	0
+Outs2	0
+Outs3	0
+Outs1	0
+Set0_106	63
+Set0_392	63
+Set0_523	63
+Set0_309	64
+Set0_416	64
+
+2013-10-28 08:58:25,370 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs0	23,21,12
+2013-10-28 08:58:25,373 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs1	39,60,33
+2013-10-28 08:58:25,374 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs2	74,56,33
+2013-10-28 08:58:25,374 INFO  [main] datagen.DataGenerator (DataGenerator.java:45)     - add point abnormal: Outs3	7,30,27
+2013-10-28 08:58:25,374 INFO  [main] test.Test         (    Test.java:31)     - now we are going to insert testing point of number: 2004
+2013-10-28 08:58:25,387 INFO  [main] test.Test         (    Test.java:46)     - After inserting the data we get grid number as681
+2013-10-28 08:58:25,389 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=178
+2013-10-28 08:58:25,473 INFO  [main] test.Test         (    Test.java:76)     - ==========================Level1 outlyer finish=================
+2013-10-28 08:58:25,474 INFO  [main] test.Test         (    Test.java:94)     - After inserting the data we get grid number as30
+2013-10-28 08:58:25,474 INFO  [main] detection.DetectMethods (DetectMethods.java:46)     - We get outLyer point number=5
+2013-10-28 08:58:25,476 INFO  [main] test.Test         (    Test.java:104)     - They are
+Outs2	0
+Outs3	0
+Outs1	0
+Outs0	3
+Set50_378	4
+Set50_158	6
+Set50_346	6
+Set50_139	7
+Set50_924	7
+Set50_768	7
+Set50_295	8
+Set50_938	8
+Set50_638	8
+Set50_588	9
+Set50_704	9
+Set50_961	9
+Set50_818	9
+Set50_330	10
+Set50_71	11
+Set50_203	11
+Set50_738	11
+Set0_704	12
+Set50_95	12
+Set0_541	13
+Set50_293	13
+Set0_451	13
+Set0_965	13
+Set50_759	13
+Set50_274	14
+Set50_549	15
+Set50_700	15
+Set50_554	15
+Set50_750	15
+Set50_385	16
+Set50_430	16
+Set50_484	16
+Set50_148	17
+Set50_881	17
+Set50_712	17
+Set50_579	17
+Set50_978	17
+Set50_185	17
+Set50_908	17
+Set0_639	17
+Set50_749	17
+Set0_676	18
+Set50_543	18
+Set50_900	18
+Set50_371	18
+Set0_248	19
+Set50_495	20
+Set0_700	20
+Set50_436	20
+Set50_576	20
+Set50_376	21
+Set50_491	21
+Set50_870	21
+Set50_613	21
+Set50_681	22
+Set50_673	23
+Set50_547	23
+Set0_531	23
+Set50_940	24
+Set50_875	24
+Set50_560	24
+Set0_896	24
+Set50_786	24
+Set50_194	24
+Set50_349	25
+Set50_149	25
+Set0_522	25
+Set50_83	27
+Set0_557	27
+Set50_783	27
+Set50_106	27
+Set50_923	27
+Set50_265	27
+Set50_550	28
+Set50_803	28
+Set50_499	28
+Set50_494	28
+Set50_13	28
+Set50_382	28
+Set50_152	28
+Set0_908	28
+Set0_316	28
+Set0_321	29
+Set50_475	29
+Set50_789	29
+Set50_639	29
+Set0_900	29
+Set0_524	30
+Set50_882	30
+Set0_770	31
+Set50_12	31
+Set50_602	31
+Set50_77	32
+Set50_506	32
+Set0_205	32
+Set50_765	32
+Set50_977	33
+Set0_389	33
+Set0_632	33
+Set0_744	34
+Set50_455	34
+Set0_421	34
+Set50_512	35
+Set50_991	35
+Set50_525	35
+Set50_309	35
+Set50_523	36
+Set50_383	36
+Set50_87	36
+Set50_325	36
+Set50_269	36
+Set50_384	36
+Set50_172	37
+Set50_958	37
+Set50_787	37
+Set50_919	37
+Set50_590	37
+Set0_150	37
+Set0_379	38
+Set50_397	38
+Set50_260	39
+Set50_247	40
+Set0_328	41
+Set50_849	41
+Set50_896	42
+Set0_784	44
+Set0_466	45
+Set0_890	45
+Set50_538	45
+Set50_370	46
+Set0_591	46
+Set50_118	46
+Set50_766	46
+Set0_558	46
+Set0_590	46
+Set0_580	47
+Set50_125	48
+Set50_438	48
+Set50_294	48
+Set0_715	49
+Set0_332	50
+Set50_890	50
+Set0_683	51
+Set0_627	51
+Set50_146	51
+Set0_215	51
+Set0_470	54
+Set0_792	54
+Set0_960	54
+Set50_946	55
+Set0_256	55
+Set0_382	56
+Set50_179	58
+Set0_613	58
+Set0_334	59
+Set0_251	59
+Set0_726	60
+Set50_120	61
+Set50_201	62
+Set0_410	62
+Set0_315	64
+Set0_681	64
+Set50_81	65
+Set0_702	68
+Set50_721	68
+Set0_500	69
+Set50_927	70
+Set0_794	72
+Set50_324	73
+

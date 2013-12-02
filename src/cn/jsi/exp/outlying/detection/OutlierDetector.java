@@ -23,7 +23,8 @@ public  class OutlierDetector {
 //			log.debug(g.toString()+":   "+g.getNumberOfPointsHit());
 //		}
 //		System.out.println("=================");
-		DetectMethods.computPointWeight2(gridList,pointList);
+//		DetectMethods.computPointWeight2(gridList,pointList);
+		DetectMethods.computPointWeight3(gridList,pointList);
 		Collections.sort(pointList);
 		return pointList;
 	}

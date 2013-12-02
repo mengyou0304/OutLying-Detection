@@ -59,20 +59,29 @@ public abstract class DistanceCalculator {
 		List<Double> d1 = g.getLocals();
 		List<Double> d2 = g.getWidths();
 		List<Double> d3 = p.getLocals();
-		List<Double> nearestPlace=new ArrayList<Double>();
-		Double dvalue1,dvalue2,dvalue3;
-		Double distance2=0d;
-		for(int i=0;i<d1.size();i++){
-			dvalue1=d1.get(i);
-			dvalue2=dvalue1+d2.get(i);
-			dvalue3=d3.get(i);
-			Double option1=(dvalue1-dvalue3)*(dvalue1-dvalue3);
-			Double option2=(dvalue2-dvalue3)*(dvalue2-dvalue3);
-			if(option1>option2)
-				option1=option2;
-			distance2+=option1;
+		List<Double> nearestPlace = new ArrayList<Double>();
+		Double dvalue1, dvalue2, dvalue3;
+		Double distance2 = 0d;
+		for (int i = 0; i < d1.size(); i++) {
+			dvalue1 = d1.get(i);
+			dvalue2 = dvalue1 + d2.get(i);
+			dvalue3 = d3.get(i);
+			Double option1 = (dvalue1 - dvalue3) * (dvalue1 - dvalue3);
+			Double option2 = (dvalue2 - dvalue3) * (dvalue2 - dvalue3);
+			if (option1 > option2)
+				option1 = option2;
+			distance2 += option1;
 		}
 		return Math.sqrt(distance2);
+	}
+	public static double simpleComputeDistance(DataPoint p, Grid g) {
+		Double d=0d;
+		List<Integer> pLocalX=SpaceDivider.getInstance().getGridNumbersByLocalValues(p.getLocals());
+		List<Integer> gLocalX=SpaceDivider.getInstance().getGridNumbersByLocalValues(g.getLocals());
+		for(int i=0;i<pLocalX.size();i++){
+			d+=(pLocalX.get(i)-gLocalX.get(i))*(pLocalX.get(i)-gLocalX.get(i));
+		}
+		return d;
 	}
 
 	public static boolean isInGrid(Grid g, DataPoint p) {
@@ -98,44 +107,26 @@ public abstract class DistanceCalculator {
 		}
 		return isInGrid;
 	}
-//	public  static Grid findNearest(List<Grid> grids, DataPoint point) {
-//		double tmpmin=0,curDistance=0;
-//		Grid tmpGrid = null;
-//		for (Grid grid : grids) {
-//			if ((grid.isDensity==false) || (point.getHitGrid().equals(grid))) {
-//				//TODO == or equals?
-//				continue;
-//			} else if (tmpmin==0) {
-//				tmpGrid=grid;
-//				tmpmin = DistanceCalculator.computeDistance(point, grid);
-//			} else {
-//				curDistance = DistanceCalculator.computeDistance(point, grid);
-//				if (tmpmin>curDistance) {
-//					tmpGrid = grid;
-//				}
-//				tmpmin = Math.min(curDistance, tmpmin);
-//			}
-//		}
-//		return tmpGrid;
-//	}
-//	public static List<Grid> findNearGridList(DataPoint point){
-//		List<Grid> nearGridList=new ArrayList<Grid>();
-//		List<Double> locals=point.getLocals();
-//		SpaceDivider spaceDivider = SpaceDivider.getInstance();
-//		for(int i=0;i<SystemParameters.dimensionNumber;i++){
-//			Double localx=locals.get(i);
-//			localx=localx+SystemParameters.divideLength;
-//			locals.set(i, localx);
-//			Grid tmpGrid=spaceDivider.getTheGridAccordingToLocal(locals);
-//			nearGridList.add(tmpGrid);
-//			
-//			localx=localx-2*SystemParameters.divideLength;
-//			locals.set(i, localx);
-//			Grid tmpGrid2=spaceDivider.getTheGridAccordingToLocal(locals);
-//			nearGridList.add(tmpGrid2);
-//		}
-////		spaceDivider.getCurrentGrids();
-//		return nearGridList;
-//	}
-	
+
+	public static List<Grid> findNearGridList(DataPoint point){
+		List<Grid> nearGridList=new ArrayList<Grid>();
+		List<Double> locals=point.getLocals();
+		SpaceDivider spaceDivider = SpaceDivider.getInstance();
+		for(int i=0;i<locals.size();i++){
+			Double localx=locals.get(i);
+			for(int curzer=-SystemParameters.nearGridLevel;curzer<=SystemParameters.nearGridLevel;curzer++){
+			Double newlocalx=localx+SystemParameters.divideLength*curzer;
+			localx=localx+SystemParameters.divideLength;
+			locals.set(i, localx);
+			Grid tmpGrid=spaceDivider.getTheGridAccordingToLocal(locals);
+			nearGridList.add(tmpGrid);
+			
+			localx=localx-2*SystemParameters.divideLength;
+			locals.set(i, localx);
+			Grid tmpGrid2=spaceDivider.getTheGridAccordingToLocal(locals);
+			nearGridList.add(tmpGrid2);
+			}
+		}
+		return nearGridList;
+	}
 }

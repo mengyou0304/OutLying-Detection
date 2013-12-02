@@ -66,19 +66,19 @@ public class DetectMethods {
 	 * @param gridList
 	 * @param pointList
 	 */
-	public static void computPointWeight(List<DataPoint> pointList) {
-		Double score = 0d;
-		for (DataPoint point : pointList) {
-			NearestGridFinder gridfinder = new NearestGridFinder();
-			List<Grid> gridList = gridfinder.getNLevelNearestGridList(
-					SystemParameters.nearGridLevel, point);
-			for (Grid grid : gridList) {
-				score += grid.getNumberOfPointsHit() / grid.getDistanceWeight();
-			}
-			point.setScore(score);
-			score = 0d;
-		}
-	}
+//	public static void computPointWeight(List<DataPoint> pointList) {
+//		Double score = 0d;
+//		for (DataPoint point : pointList) {
+//			NearestGridFinder gridfinder = new NearestGridFinder();
+//			List<Grid> gridList = gridfinder.getNLevelNearestGridList(
+//					SystemParameters.nearGridLevel, point);
+//			for (Grid grid : gridList) {
+//				score += grid.getNumberOfPointsHit() / grid.getDistanceWeight();
+//			}
+//			point.setScore(score);
+//			score = 0d;
+//		}
+//	}
 
 	public static void computPointWeight2(List<Grid> possibleGridList,
 			List<DataPoint> pointList) {
@@ -88,6 +88,7 @@ public class DetectMethods {
 			log.debug("start finding grids for point: "+point);
 			List<Grid> gridList = gridfinder.getNLevelNearestGridList(
 					SystemParameters.nearGridLevel, point);
+//			List<Grid> gridList = DistanceCalculator.findNearGridList(point);
 			int usedGrid=0;
 			for (Grid grid : gridList) {
 				if(grid.getDistanceWeight()==0)
@@ -101,6 +102,19 @@ public class DetectMethods {
 			score = 0d;
 		}
 	}
+	public static void computPointWeight3(List<Grid> densityGridList,
+			List<DataPoint> pointList) {
+		for(Grid g: densityGridList){
+			for(DataPoint p: pointList){
+				Double distance=DistanceCalculator.simpleComputeDistance(p, g);
+				if(distance>SystemParameters.nearGridDistance)
+					continue;
+				Double score=p.getScore();
+				score+=g.getWeight()/(distance);
+				p.setScore(score);
+			}
+		}
+	}
 
 	public static Double computDistanceBetweenTwoGrid(
 			List<Integer> gridlocalX1, List<Integer> gridlocalX2) {
@@ -111,6 +125,15 @@ public class DetectMethods {
 		}
 		return (distance2);
 
+	}
+
+	public static List<Grid> getNormalGrids(List<Grid> grids) {
+		ArrayList<Grid> densityGrid=new ArrayList<Grid>();
+		for(Grid g:grids){
+			if (g.isDensity())
+				densityGrid.add(g);
+		}
+		return densityGrid;
 	}
 
 }
