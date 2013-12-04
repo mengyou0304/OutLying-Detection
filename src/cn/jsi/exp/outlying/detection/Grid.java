@@ -15,33 +15,36 @@ import cn.jsi.exp.outlying.util.DistanceCalculator;
  * @author yulang RobinMeng
  */
 public class Grid {
+	private static Integer idgen=0;
+	private Integer id;
 	private  List<Double> locals;
 	private  List<Double> widths;
 	private int numberOfPointsHit = 0;
 	private List<DataPoint> hitPoints;
+	private List<DataPoint> summedPoints;
 	private boolean isDensity;
 	private Integer weight = 0;
+	private List<Domain> domainlist=new ArrayList<Domain>();
+	private Domain domain;
 	private Double distanceWeight = 0d;
 
-	public Grid() {
-		locals = new ArrayList<Double>();
-		widths = new ArrayList<Double>();
-		hitPoints = new ArrayList<DataPoint>();
-	}
 
 	public Grid(List<Double> localvalues) {
+		id=idgen;
+		idgen++;
 		locals = new ArrayList<Double>();
 		for (int i = 0; i < localvalues.size(); i++) {
-			Double tempd = localvalues.get(i) / SystemParameters.divideLength;
+			Double tempd = localvalues.get(i) / SystemParameters.currentParameters.getDivideLength();
 
 			Integer number = tempd.intValue();
-			locals.add(number * SystemParameters.divideLength);
+			locals.add(number * SystemParameters.currentParameters.getDivideLength());
 		}
 		widths = new ArrayList<Double>();
 		for (int i = 0; i < locals.size(); i++) {
-			widths.add(SystemParameters.divideLength);
+			widths.add(SystemParameters.currentParameters.getDivideLength());
 		}
 		hitPoints = new ArrayList<DataPoint>();
+		summedPoints=new ArrayList<DataPoint>();
 	}
 
 	public  List<Double> getLocals() {
@@ -93,6 +96,23 @@ public class Grid {
 	}
 
 
+	public List<DataPoint> getSummedPoints() {
+		return summedPoints;
+	}
+
+	public void setSummedPoints(List<DataPoint> summedPoints) {
+		this.summedPoints = summedPoints;
+	}
+
+	
+	public Domain getDomain() {
+		return domain;
+	}
+
+	public void setDomain(Domain domain) {
+		this.domain = domain;
+	}
+
 	public boolean isDensity() {
 		return isDensity;
 	}
@@ -107,6 +127,14 @@ public class Grid {
 			s+=i.intValue()+",";
 		}
 		return s;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 

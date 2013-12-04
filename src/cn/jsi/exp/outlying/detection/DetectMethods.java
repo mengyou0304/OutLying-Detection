@@ -33,7 +33,7 @@ public class DetectMethods {
 		List<DataPoint> possibleOutliers = new ArrayList<DataPoint>();
 		for (Grid g : gridlist) {
 			int hitNumber = g.getNumberOfPointsHit();
-			if (hitNumber >= SystemParameters.densityThreshold)
+			if (hitNumber >= SystemParameters.currentParameters.getDensityThreshold())
 				g.setDensity(true);
 			else {
 				g.setDensity(false);
@@ -87,7 +87,7 @@ public class DetectMethods {
 			NearestGridFinder gridfinder = new NearestGridFinder();
 			log.debug("start finding grids for point: "+point);
 			List<Grid> gridList = gridfinder.getNLevelNearestGridList(
-					SystemParameters.nearGridLevel, point);
+					SystemParameters.currentParameters.getNearGridLevel(), point);
 //			List<Grid> gridList = DistanceCalculator.findNearGridList(point);
 			int usedGrid=0;
 			for (Grid grid : gridList) {
@@ -107,7 +107,7 @@ public class DetectMethods {
 		for(Grid g: densityGridList){
 			for(DataPoint p: pointList){
 				Double distance=DistanceCalculator.simpleComputeDistance(p, g);
-				if(distance>SystemParameters.nearGridDistance)
+				if(distance>SystemParameters.currentParameters.getNearGridDistance())
 					continue;
 				Double score=p.getScore();
 				score+=g.getWeight()/(distance);

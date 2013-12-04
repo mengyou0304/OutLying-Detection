@@ -1,4 +1,4 @@
-package cn.jsi.exp.outlying.datagen;
+package cn.jsi.exp.outlying.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,7 @@ import java.util.Random;
 import org.apache.log4j.Logger;
 
 import cn.jsi.exp.outlying.analyz.ErrorEventController;
+import cn.jsi.exp.outlying.datagen.DataGenConfiguration;
 import cn.jsi.exp.outlying.detection.DataPoint;
 import cn.jsi.exp.outlying.setting.SystemParameters;
 
@@ -54,32 +55,23 @@ public class DataGenerator {
 	public static DataPoint toData(String s) {
 		String[] ss = s.split(",");
 		List<Double> locals = new ArrayList<Double>();
-		if (!SystemParameters.use_PCA_Data) {
-			locals.add(100 * Double.parseDouble(ss[47]));
-			locals.add(100 * Double.parseDouble(ss[48]));
-			locals.add(100 * Double.parseDouble(ss[49]));
-			locals.add(100 * Double.parseDouble(ss[50]));
-			locals.add(100 * Double.parseDouble(ss[51]));
-		} else {
-//			locals.add(100 * Double.parseDouble(ss[42]));
-//			locals.add(100 * Double.parseDouble(ss[43]));
-//			locals.add(100 * Double.parseDouble(ss[44]));
-//			locals.add(100 * Double.parseDouble(ss[45]));
-//			locals.add(100 * Double.parseDouble(ss[46]));
-			locals.add(100 * Double.parseDouble(ss[44]));
-			locals.add(100 * Double.parseDouble(ss[45]));
-			locals.add(100 * Double.parseDouble(ss[46]));
-			locals.add(100 * Double.parseDouble(ss[47]));
-			locals.add(100 * Double.parseDouble(ss[48]));
-			locals.add(100 * Double.parseDouble(ss[49]));
-			locals.add(100 * Double.parseDouble(ss[50]));
-			locals.add(100 * Double.parseDouble(ss[51]));
-			locals.add(100 * Double.parseDouble(ss[42]));
-			locals.add(100 * Double.parseDouble(ss[53]));
+		for (int i = SystemParameters.currentParameters.getDataLinesStart(); i <= SystemParameters.currentParameters
+				.getDataLineEnds(); i++) {
+			if (SystemParameters.currentParameters.getUse100())
+				locals.add(100 * Double.parseDouble(ss[i]));
+			else
+				locals.add(Double.parseDouble(ss[i]));
+
 		}
 		DataPoint tdata = new DataPoint(locals);
-		String type = ss[41];
+		String type = ss[SystemParameters.currentParameters.getTypeColumn()];
 		tdata.setPointType(type);
+		if (SystemParameters.currentParameters.getOldscoreColumn() != null) {
+			Integer oldscore = Integer
+					.parseInt(ss[SystemParameters.currentParameters
+							.getOldscoreColumn()]);
+			tdata.setOldScore(oldscore);
+		}
 		tdata.setPointID(type
 				+ ErrorEventController.errorTypeMap_input.get(type));
 		if (type.equals("normal."))
@@ -87,9 +79,12 @@ public class DataGenerator {
 		// if(!ErrorEventController.errorTypeMap_input.keySet().contains(type))
 		// ErrorEventController.newlist.add(type);
 		Integer times = ErrorEventController.errorTypeMap_input.get(type);
-		if (times == null)
-			return null;
-		if (times > SystemParameters.outlyer_Number_Per_Type)
+		if (times == null) {
+			ErrorEventController.errorTypeMap_input.put(type, 1);
+			return tdata;
+		}
+		if (times > SystemParameters.currentParameters
+				.getOutlyer_Number_Per_Type())
 			return null;
 		ErrorEventController.errorTypeMap_input.put(type, times + 1);
 		return tdata;

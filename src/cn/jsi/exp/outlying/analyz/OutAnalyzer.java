@@ -12,8 +12,8 @@ import cn.jsi.exp.outlying.detection.DataPoint;
 import cn.jsi.exp.outlying.setting.SystemParameters;
 import cn.jsi.exp.outlying.test.DataProcess1;
 
-public class Analyzer {
-	private static final Logger log = Logger.getLogger(Analyzer.class);
+public class OutAnalyzer {
+	private static final Logger log = Logger.getLogger(OutAnalyzer.class);
 
 	public static void analyze(List<DataPoint> possibleOutlierPoints) {
 		List<DataPoint> clusteringList=new ArrayList<DataPoint>();
@@ -29,7 +29,7 @@ public class Analyzer {
 			anomalyValues[i] = 0;
 		}
 		for (DataPoint p : possibleOutlierPoints) {
-			if(p.getScore()<=SystemParameters.outputScoreThreshold)
+			if(p.getScore()<=SystemParameters.currentParameters.getOutputScoreThreshold())
 				clusteringList.add(p);
 			if ("normal.".equals(p.getPointType())) {
 				int pointvalue = p.getScore().intValue();
@@ -54,21 +54,24 @@ public class Analyzer {
 		for (int i = 0; i < 42000; i++) {
 			currentNormalValue += normalValues[i];
 			currentAnomalyValue+=anomalyValues[i];
+			if((currentAnomalyValue+currentNormalValue)==0)
+				continue;
+				
 			if (i < 10) {
-				s += i + ":\t" +currentAnomalyValue+" / "+ currentNormalValue + "("+currentAnomalyValue*100/currentNormalValue+"%)\n";
+				s += i + ":\t" +currentAnomalyValue+" / "+ (currentAnomalyValue+currentNormalValue) + "("+currentAnomalyValue*100/(currentAnomalyValue+currentNormalValue)+"%)\n";
 				continue;
 			}
 			if (i < 100 && i % 10 == 0) {
-				s += i + ":\t" +currentAnomalyValue+" / "+ currentNormalValue + "("+currentAnomalyValue*100/currentNormalValue+"%)\n";
-					continue;
+				s += i + ":\t" +currentAnomalyValue+" / "+ (currentAnomalyValue+currentNormalValue) + "("+currentAnomalyValue*100/(currentAnomalyValue+currentNormalValue)+"%)\n";
+									continue;
 			}
 			if (i < 1000 && i % 100 == 0) {
-				s += i + ":\t" +currentAnomalyValue+" / "+ currentNormalValue + "("+currentAnomalyValue*100/currentNormalValue+"%)\n";
-					continue;
+				s += i + ":\t" +currentAnomalyValue+" / "+ (currentAnomalyValue+currentNormalValue) + "("+currentAnomalyValue*100/(currentAnomalyValue+currentNormalValue)+"%)\n";
+									continue;
 			}
 			if ( i % 1000 == 0) {
-				s += i + ":\t" +currentAnomalyValue+" / "+ currentNormalValue + "("+currentAnomalyValue*100/currentNormalValue+"%)\n";
-					continue;
+				s += i + ":\t" +currentAnomalyValue+" / "+ (currentAnomalyValue+currentNormalValue) + "("+currentAnomalyValue*100/(currentAnomalyValue+currentNormalValue)+"%)\n";
+									continue;
 			}
 		}
 		log.info(s);
@@ -96,15 +99,14 @@ public class Analyzer {
 				+ "  =" + inallOutLyingNumber * 100 / inallErrorNumber + "%";
 
 		log.info(s2);
-		if(SystemParameters.outputFile)
-			outPutOutliers(clusteringList);
+			outPutOutliers(clusteringList,SystemParameters.currentParameters.getOutputFile());
 	}
-	public static void outPutOutliers(List<DataPoint> possibleOutlierPoints){
+	public static void outPutOutliers(List<DataPoint> possibleOutlierPoints,String url){
 		String s="";
 		for(DataPoint p:possibleOutlierPoints){
 			s+=p.toFileData()+"\n";
 		}
-		log.info("Output to file...."+Locator.getInstance().getBaseLocation()+"outliers.csv");
-		FileUtility.writeToFile(Locator.getInstance().getBaseLocation()+"outliers.csv", s);
+		log.info("Output to file...."+Locator.getInstance().getBaseLocation()+url);
+		FileUtility.writeToFile(Locator.getInstance().getBaseLocation()+url, s);
 	}
 }

@@ -14,9 +14,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import cn.jsi.exp.outlying.datagen.DataGenerator;
 import cn.jsi.exp.outlying.detection.DataPoint;
 import cn.jsi.exp.outlying.detection.SpaceDivider;
+import cn.jsi.exp.outlying.util.DataGenerator;
 
 /**
  * 

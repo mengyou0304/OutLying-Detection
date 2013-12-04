@@ -83,6 +83,15 @@ public abstract class DistanceCalculator {
 		}
 		return d;
 	}
+	public static double simpleComputeDistance_G(Grid g1, Grid g2){
+		Double d=0d;
+		List<Integer> pLocalX=SpaceDivider.getInstance().getGridNumbersByLocalValues(g1.getLocals());
+		List<Integer> gLocalX=SpaceDivider.getInstance().getGridNumbersByLocalValues(g2.getLocals());
+		for(int i=0;i<pLocalX.size();i++){
+			d+=(pLocalX.get(i)-gLocalX.get(i))*(pLocalX.get(i)-gLocalX.get(i));
+		}
+		return d;
+	}
 
 	public static boolean isInGrid(Grid g, DataPoint p) {
 		boolean isInGrid = true;
@@ -114,14 +123,14 @@ public abstract class DistanceCalculator {
 		SpaceDivider spaceDivider = SpaceDivider.getInstance();
 		for(int i=0;i<locals.size();i++){
 			Double localx=locals.get(i);
-			for(int curzer=-SystemParameters.nearGridLevel;curzer<=SystemParameters.nearGridLevel;curzer++){
-			Double newlocalx=localx+SystemParameters.divideLength*curzer;
-			localx=localx+SystemParameters.divideLength;
+			for(int curzer=-SystemParameters.currentParameters.getNearGridLevel();curzer<=SystemParameters.currentParameters.getNearGridLevel();curzer++){
+			Double newlocalx=localx+SystemParameters.currentParameters.getDivideLength()*curzer;
+			localx=localx+SystemParameters.currentParameters.getDivideLength();
 			locals.set(i, localx);
 			Grid tmpGrid=spaceDivider.getTheGridAccordingToLocal(locals);
 			nearGridList.add(tmpGrid);
 			
-			localx=localx-2*SystemParameters.divideLength;
+			localx=localx-2*SystemParameters.currentParameters.getDivideLength();
 			locals.set(i, localx);
 			Grid tmpGrid2=spaceDivider.getTheGridAccordingToLocal(locals);
 			nearGridList.add(tmpGrid2);

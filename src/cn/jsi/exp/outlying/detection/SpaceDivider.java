@@ -20,7 +20,8 @@ public class SpaceDivider {
 	private static final Logger log = Logger.getLogger(SpaceDivider.class);
 
 	private SpaceDivider() {
-
+		gridMap = new HashMap<String, Grid>();
+		
 	}
 
 	private static SpaceDivider instance;
@@ -33,6 +34,7 @@ public class SpaceDivider {
 
 	public static SpaceDivider newInstance() {
 		instance = new SpaceDivider();
+		instance.gridMap = new HashMap<String, Grid>();
 		return instance;
 	}
 
@@ -64,7 +66,7 @@ public class SpaceDivider {
 		String key = "";
 		for (Integer i : localx) {
 			key += i + ",";
-			localvalues.add(i * SystemParameters.divideLength);
+			localvalues.add(i * SystemParameters.currentParameters.getDivideLength());
 		}
 		Grid g = gridMap.get(key);
 		if (g == null) {
@@ -103,7 +105,7 @@ public class SpaceDivider {
 	public List<Integer> getGridNumbersByLocalValues(List<Double> localvalues) {
 		List<Integer> gridNumber = new ArrayList<Integer>();
 		for (int i = 0; i < localvalues.size(); i++) {
-			Double j = localvalues.get(i) / SystemParameters.divideLength;
+			Double j = localvalues.get(i) / SystemParameters.currentParameters.getDivideLength();
 			int number = j.intValue();
 			gridNumber.add(number);
 		}

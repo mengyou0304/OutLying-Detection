@@ -19,6 +19,7 @@ public class DataPoint implements Comparable<DataPoint> {
 	private Grid nearestGrid;
 	private Grid hitGrid;
 	private List<Double> locals;
+	private Integer oldScore=0;
 
 	public DataPoint() {
 
@@ -83,10 +84,19 @@ public class DataPoint implements Comparable<DataPoint> {
 		this.pointType = pointType;
 	}
 
+	
+	public Integer getOldScore() {
+		return oldScore;
+	}
+
+	public void setOldScore(Integer oldScore) {
+		this.oldScore = oldScore;
+	}
+
 	@Override
 	public String toString() {
 		String s = pointID + "\t";
-		if (SystemParameters.showPointAxis) {
+		if (SystemParameters.currentParameters.getShowPoIntegerAxis()) {
 			for (Double d : locals) {
 				s += d.intValue() + ",";
 			}
@@ -101,6 +111,8 @@ public class DataPoint implements Comparable<DataPoint> {
 			s += d.intValue() + ",";
 		}
 		s+=getScore().intValue();
+		s+=","+getPointType();
+		
 		return s;
 	}
 
